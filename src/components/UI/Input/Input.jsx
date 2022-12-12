@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
-const Input = () => {
-  return (
-    <input type="text" />
-  )
-}
+const Input = ({ name, value, type }) => {
+	return <input name={name} value={value} type={type} />;
+};
 
-export default Input
+export default Input;

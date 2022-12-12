@@ -9,7 +9,7 @@ const Time = () => {
 	React.useEffect(() => {
 		if (seconds > 0 && timerActive) {
 			setTimeout(setSeconds, 1000, seconds - 1);
-		} else if (minutes == 0) {
+		} else if (minutes === 0) {
 			setTimerActive(false);
 		} else {
 			secondReset();
