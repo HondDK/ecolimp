@@ -1,9 +1,11 @@
-import TestFive from "./pages/TestFive";
+import Language from "./pages/Language";
+import TestOne from "./pages/TestOne";
 import "./style/style.scss";
 function App() {
 	return (
 		<div className="App">
-			<TestFive />
+			<Language />
+			<TestOne />
 		</div>
 	);
 }

@@ -1,4 +1,5 @@
 import React from "react";
+import Input from "../components/UI/Input/Input";
 
 const Registration = () => {
 	return (
@@ -8,17 +9,17 @@ const Registration = () => {
 				<form class="content" action="#">
 					<div class="content__widget">
 						<p>Фамилия</p>
-						<input type="text" />
+						<Input />
 						<p>Имя</p>
-						<input type="text" />
+						<Input />
 						<p>Отчество</p>
-						<input type="text" />
+						<Input />
 						<p>Наименование учебной организации</p>
-						<input type="text" />
+						<Input />
 						<p>Специальность</p>
-						<input type="text" />
+						<Input />
 						<p>Курс</p>
-						<input type="text" />
+						<Input />
 					</div>
 					<button class="btn__submit">Приступить к выполнению заданий</button>
 				</form>

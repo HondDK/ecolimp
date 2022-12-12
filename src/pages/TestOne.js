@@ -1,5 +1,6 @@
 import React from "react";
 import ButtonCloseTest from "../components/UI/ButtonCloseTest/ButtonCloseTest";
+import Time from "../components/UI/Time/Time";
 
 const TestOne = () => {
 	return (
@@ -7,9 +8,7 @@ const TestOne = () => {
 			<body class="test">
 				<header>
 					<h1>Практическое задание №1</h1>
-					<p>
-						2:<span class="time">00</span>
-					</p>
+					<Time />
 				</header>
 
 				<main class="main__test">
