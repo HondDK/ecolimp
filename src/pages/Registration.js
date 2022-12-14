@@ -18,7 +18,6 @@ const Registration = () => {
 		"https://script.google.com/macros/s/AKfycbw_0QL1M0DbXh18VxjaHY1MaSi8NbzueGgGZlI9DUnKO7eoTq2lltv14udpB_kn1hbLfg/exec";
 
 	function Submit(e) {
-		e.preventDefault();
 		const formEle = document.querySelector("form");
 		const formDatab = new FormData(formEle);
 		fetch(scriptUrl, {
@@ -35,6 +34,7 @@ const Registration = () => {
 	}
 
 	const buttonSubmit = (e) => {
+		e.preventDefault();
 		let inputs = Array.from(document.querySelectorAll("input"));
 		let inputsValueTrue = inputs.every((input) => input.value);
 		if (inputsValueTrue) {
