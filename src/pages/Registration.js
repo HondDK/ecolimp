@@ -9,13 +9,20 @@ const Registration = () => {
 	const [institution, setInstitution] = useState("");
 	const [profession, setProfession] = useState("");
 	const [course, setCourse] = useState("");
+	const [time, setTime] = useState("");
 
 	React.useEffect(() => {
 		document.getElementById("noneSubmit").style.display = "none";
+		currentTime();
 	}, []);
 
 	const scriptUrl =
-		"https://script.google.com/macros/s/AKfycbw_0QL1M0DbXh18VxjaHY1MaSi8NbzueGgGZlI9DUnKO7eoTq2lltv14udpB_kn1hbLfg/exec";
+		"https://script.google.com/macros/s/AKfycbywnZDRN58kTS3j18l0v6EfqfOsztt8rUP-3cS8zOpkFy_1jVOaiv6TMJfNIOK_-qbQJA/exec";
+
+	const currentTime = () => {
+		let date = new Date().toString().slice(3, 21);
+		setTime(date);
+	};
 
 	function Submit(e) {
 		const formEle = document.querySelector("form");
@@ -97,6 +104,12 @@ const Registration = () => {
 							onChange={(e) => {
 								setCourse(e.target.value);
 							}}
+						/>
+						<input
+							id="date"
+							name="Date"
+							style={{ display: "none" }}
+							value={time}
 						/>
 					</div>
 					<p
