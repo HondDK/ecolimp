@@ -143,11 +143,11 @@ main {
 	.test-term {
 		display: grid;
 		font-style: arial;
-		grid-template-columns: 4fr repeat(2, 1fr);
+		grid-template-columns: repeat(2, 1fr);
 		grid-template-rows: repeat(4, 1fr);
 		grid-column-gap: 25px;
 		grid-row-gap: 50px;
-		button {
+		select {
 			border-radius: 15px;
 			height: 63px;
 			width: 205px;

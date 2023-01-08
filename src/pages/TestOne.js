@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import ButtonCloseTest from "../components/UI/ButtonCloseTest/ButtonCloseTest";
+import Select from "../components/UI/Select/Select";
 import Time from "../components/UI/Time/Time";
-import ButtonReply from "../components/UI/ButtonReply/ButtonReply";
 
 const TestOne = () => {
+	const [value, setValue] = useState("");
+
+	function handleChange(event) {
+		setValue(event.target.value);
+	}
+
 	return (
 		<div>
 			<body class="test">
@@ -22,20 +28,17 @@ const TestOne = () => {
 							Необходимо разработать комплекс мер по замедлению или прекращению
 							спада производства и снижению темпов инфляции
 						</p>
-						<ButtonReply>Нормативная</ButtonReply>
-						<ButtonReply>Позитивная</ButtonReply>
+						<Select></Select>
 						<p class="p__test-text">
 							За последнее время в экономике страны наблюдается спад
 							производства и высокие темпы инфляции
 						</p>
-						<ButtonReply>Нормативная</ButtonReply>
-						<ButtonReply>Позитивная</ButtonReply>
+						<Select></Select>
 						<p class="p__test-text">
 							Структурная перестройка экономики страны, помимо других целей,
 							направлена на повышение уровня потребления людей
 						</p>
-						<ButtonReply>Нормативная</ButtonReply>
-						<ButtonReply>Позитивная</ButtonReply>
+						<Select></Select>
 						<p class="p__test-text">
 							Осуществление структурной перестройки неизбежно ведет к разрушению
 							эгалитаризма, господствующего в мышлении многих людей, резкому
@@ -43,8 +46,7 @@ const TestOne = () => {
 							дестабилизации, и поэтому структурная перестройка должна
 							осуществляться постепенно
 						</p>
-						<ButtonReply>Нормативная</ButtonReply>
-						<ButtonReply>Позитивная</ButtonReply>
+						<Select></Select>
 					</div>
 					<ButtonCloseTest>Завершить задание</ButtonCloseTest>
 				</main>
