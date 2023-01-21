@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import ButtonCloseTest from "../components/UI/ButtonCloseTest/ButtonCloseTest";
 
 const TestTwo = () => {
+	const [selectedButton, setSelectedButton] = useState(null);
+
+	const handleButtonClick = (button) => {
+		setSelectedButton(button);
+	};
 	return (
 		<body class="test">
 			<header>
@@ -21,10 +26,38 @@ const TestTwo = () => {
 					политику"
 				</div>
 				<div class="test_btn">
-					<button>А.Смит</button>
-					<button>Дж.М.Кейнс</button>
-					<button>К.Маркс</button>
-					<button>М.Фридмен</button>
+					<button
+						style={{
+							backgroundColor: selectedButton === 1 ? "green" : "white",
+						}}
+						onClick={() => handleButtonClick(1)}
+					>
+						А.Смит
+					</button>
+					<button
+						style={{
+							backgroundColor: selectedButton === 2 ? "green" : "white",
+						}}
+						onClick={() => handleButtonClick(2)}
+					>
+						Дж.М.Кейнс
+					</button>
+					<button
+						style={{
+							backgroundColor: selectedButton === 3 ? "green" : "white",
+						}}
+						onClick={() => handleButtonClick(3)}
+					>
+						К.Маркс
+					</button>
+					<button
+						style={{
+							backgroundColor: selectedButton === 4 ? "green" : "white",
+						}}
+						onClick={() => handleButtonClick(4)}
+					>
+						М.Фридмен
+					</button>
 				</div>
 				<div class="wrap__btn">
 					<ButtonCloseTest>Завершить задание</ButtonCloseTest>

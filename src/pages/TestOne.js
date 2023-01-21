@@ -1,14 +1,15 @@
 import React, { useState } from "react";
 import ButtonCloseTest from "../components/UI/ButtonCloseTest/ButtonCloseTest";
+import ButtonReply from "../components/UI/ButtonReply/ButtonReply";
 import Select from "../components/UI/Select/Select";
 import Time from "../components/UI/Time/Time";
 
 const TestOne = () => {
-	const [value, setValue] = useState("");
+	const [selectedButton, setSelectedButton] = useState(null);
 
-	function handleChange(event) {
-		setValue(event.target.value);
-	}
+	const handleButtonClick = (button) => {
+		setSelectedButton(button);
+	};
 
 	return (
 		<div>
@@ -28,17 +29,17 @@ const TestOne = () => {
 							Необходимо разработать комплекс мер по замедлению или прекращению
 							спада производства и снижению темпов инфляции
 						</p>
-						<Select></Select>
+						<ButtonReply></ButtonReply>
 						<p class="p__test-text">
 							За последнее время в экономике страны наблюдается спад
 							производства и высокие темпы инфляции
 						</p>
-						<Select></Select>
+						<ButtonReply></ButtonReply>
 						<p class="p__test-text">
 							Структурная перестройка экономики страны, помимо других целей,
 							направлена на повышение уровня потребления людей
 						</p>
-						<Select></Select>
+						<ButtonReply></ButtonReply>
 						<p class="p__test-text">
 							Осуществление структурной перестройки неизбежно ведет к разрушению
 							эгалитаризма, господствующего в мышлении многих людей, резкому
@@ -46,7 +47,7 @@ const TestOne = () => {
 							дестабилизации, и поэтому структурная перестройка должна
 							осуществляться постепенно
 						</p>
-						<Select></Select>
+						<ButtonReply></ButtonReply>
 					</div>
 					<ButtonCloseTest>Завершить задание</ButtonCloseTest>
 				</main>

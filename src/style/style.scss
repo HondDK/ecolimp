@@ -85,9 +85,6 @@ main {
 
 		input {
 			border-radius: $inputRadius;
-			text-align: center;
-			font-family: Arial, Helvetica, sans-serif;
-			font-size: 20px;
 		}
 	}
 	.btn__submit {
@@ -147,12 +144,13 @@ main {
 		grid-template-rows: repeat(4, 1fr);
 		grid-column-gap: 25px;
 		grid-row-gap: 50px;
-		select {
+		button {
 			border-radius: 15px;
 			height: 63px;
 			width: 205px;
 			font-family: $Inter;
 			font-size: 20px;
+			margin-left: 15px;
 		}
 	}
 	.btn__close-task {
