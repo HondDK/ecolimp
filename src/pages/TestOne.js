@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 const TestOne = () => {
 	let navigate = useNavigate();
 	const [value, setValue] = useState();
+	const [min, setMin] = useState(2);
 
 	const handleChange = (value) => {
 		setValue(value);
@@ -23,7 +24,7 @@ const TestOne = () => {
 			<body class="test">
 				<header>
 					<h1>Практическое задание №1</h1>
-					<Time onChange={handleChange} />
+					<Time min={min} onChange={handleChange} />
 				</header>
 				<main class="main__test">
 					<div class="test-title">

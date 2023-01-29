@@ -1,9 +1,9 @@
 import React from "react";
 import { useState } from "react";
 
-const Time = ({ onChange }) => {
+const Time = ({ onChange, min }) => {
 	const [seconds, setSeconds] = useState(60);
-	const [minutes, setMinutes] = useState(0);
+	const [minutes, setMinutes] = useState(min);
 	const [timerActive, setTimerActive] = useState(true);
 
 	const handleChange = () => {
