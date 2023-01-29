@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import Time from "../components/UI/Time/Time";
 
 const TestTwo = () => {
 	const [selectedButton, setSelectedButton] = useState(null);
@@ -12,13 +13,23 @@ const TestTwo = () => {
 	const buttonSubmit = () => {
 		navigate("/testtree", { replace: true });
 	};
-	
+
+	const [value, setValue] = useState();
+	const [min, setMin] = useState(0);
+
+	const handleChange = (value) => {
+		setValue(value);
+		if (value == false) {
+			navigate("/testtree", { replace: true });
+		}
+	};
+
 	return (
 		<body class="test">
 			<header>
 				<h1>Практическое задание №2</h1>
 				<p>
-					1:<span class="time">00</span>
+					<Time min={min} onChange={handleChange} />
 				</p>
 			</header>
 

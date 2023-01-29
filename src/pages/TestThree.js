@@ -1,5 +1,5 @@
-import React from "react";
-import ButtonCloseTest from "../components/UI/ButtonCloseTest/ButtonCloseTest";
+import { useState } from "react";
+import Time from "../components/UI/Time/Time";
 import { useNavigate } from "react-router-dom";
 
 const TestThree = () => {
@@ -9,13 +9,23 @@ const TestThree = () => {
 		navigate("/testfour", { replace: true });
 	};
 
+	const [value, setValue] = useState();
+	const [min, setMin] = useState(9);
+
+	const handleChange = (value) => {
+		setValue(value);
+		if (value == false) {
+			navigate("/testfour", { replace: true });
+		}
+	};
+
 	return (
 		<div>
 			<body class="test">
 				<header>
 					<h1>Практическое задание №3</h1>
 					<p>
-						10:<span class="time">00</span>
+						<Time min={min} onChange={handleChange} />
 					</p>
 				</header>
 				<main class="main__test">

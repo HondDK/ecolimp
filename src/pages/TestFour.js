@@ -1,14 +1,27 @@
-import React from "react";
-import ButtonCloseTest from "../components/UI/ButtonCloseTest/ButtonCloseTest";
+import React, { useState } from "react";
+
+import Time from "../components/UI/Time/Time";
+import { useNavigate } from "react-router-dom";
 
 const TestFour = () => {
+	const [value, setValue] = useState();
+	const [min, setMin] = useState(11);
+
+	let navigate = useNavigate();
+	const handleChange = (value) => {
+		setValue(value);
+		if (value == false) {
+			navigate("/testfour", { replace: true });
+		}
+	};
+
 	return (
 		<div>
 			<body class="test">
 				<header>
 					<h1>Практическое задание №4</h1>
 					<p>
-						12:<span class="time">00</span>
+						<Time min={min} onChange={handleChange} />
 					</p>
 				</header>
 
