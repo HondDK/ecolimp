@@ -5,10 +5,39 @@ import TestTree from "./pages/TestThree";
 import TestFour from "./pages/TestFour";
 import Registration from "./pages/Registration";
 import "./style/style.scss";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
+const router = createBrowserRouter([
+	{
+		path: "/",
+		element: <Language></Language>,
+	},
+	{
+		path: "/reg",
+		element: <Registration></Registration>,
+	},
+	{
+		path: "/testone",
+		element: <TestOne></TestOne>,
+	},
+	{
+		path: "/testtwo",
+		element: <TestTwo></TestTwo>,
+	},
+	{
+		path: "/testtree",
+		element: <TestTree></TestTree>,
+	},
+	{
+		path: "/testfour",
+		element: <TestFour></TestFour>,
+	},
+]);
+
 function App() {
 	return (
 		<div className="App">
-			<TestFour />
+			<RouterProvider router={router} />
 		</div>
 	);
 }
