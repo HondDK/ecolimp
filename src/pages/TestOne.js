@@ -1,12 +1,20 @@
-import React, { useState } from "react";
-import ButtonCloseTest from "../components/UI/ButtonCloseTest/ButtonCloseTest";
+import React, { useState, useEffect } from "react";
 import ButtonReply from "../components/UI/ButtonReply/ButtonReply";
 import Time from "../components/UI/Time/Time";
 import { useNavigate } from "react-router-dom";
 
 const TestOne = () => {
 	let navigate = useNavigate();
+	const [value, setValue] = useState();
+
+	const handleChange = (value) => {
+		setValue(value);
+		if (value == false) {
+			navigate("/testtwo", { replace: true });
+		}
+	};
 	const buttonSubmit = () => {
+		console.log(value);
 		navigate("/testtwo", { replace: true });
 	};
 
@@ -15,7 +23,7 @@ const TestOne = () => {
 			<body class="test">
 				<header>
 					<h1>Практическое задание №1</h1>
-					<Time />
+					<Time onChange={handleChange} />
 				</header>
 				<main class="main__test">
 					<div class="test-title">

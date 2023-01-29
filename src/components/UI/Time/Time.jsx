@@ -1,15 +1,20 @@
 import React from "react";
 import { useState } from "react";
 
-const Time = () => {
+const Time = ({ onChange }) => {
 	const [seconds, setSeconds] = useState(60);
-	const [minutes, setMinutes] = useState(2);
+	const [minutes, setMinutes] = useState(0);
 	const [timerActive, setTimerActive] = useState(true);
+
+	const handleChange = () => {
+		onChange(timerActive); // callback-функция
+	};
 
 	React.useEffect(() => {
 		if (seconds > 0 && timerActive) {
 			setTimeout(setSeconds, 1000, seconds - 1);
 		} else if (minutes === 0) {
+			handleChange();
 			setTimerActive(false);
 		} else {
 			secondReset();
