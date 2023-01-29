@@ -4,6 +4,7 @@ import TestTwo from "./pages/TestTwo";
 import TestTree from "./pages/TestThree";
 import TestFour from "./pages/TestFour";
 import Registration from "./pages/Registration";
+import ErrorPage from "./pages/ErrorPage";
 import "./style/style.scss";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
@@ -11,6 +12,7 @@ const router = createBrowserRouter([
 	{
 		path: "/",
 		element: <Language></Language>,
+		errorElement: <ErrorPage />,
 	},
 	{
 		path: "/reg",
