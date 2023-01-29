@@ -1,6 +1,6 @@
 import React from "react";
-
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Registration = () => {
 	const [surname, setSurname] = useState("");
@@ -10,7 +10,8 @@ const Registration = () => {
 	const [profession, setProfession] = useState("");
 	const [course, setCourse] = useState("");
 	const [time, setTime] = useState("");
-
+	let navigate = useNavigate();
+	let isAuth;
 	React.useEffect(() => {
 		document.getElementById("noneSubmit").style.display = "none";
 		currentTime();
@@ -46,6 +47,8 @@ const Registration = () => {
 		let inputsValueTrue = inputs.every((input) => input.value);
 		if (inputsValueTrue) {
 			Submit(e);
+			navigate("/testone", { replace: true });
+			isAuth = true;
 			console.log(surname, name, patronymic, institution, profession, course);
 			document.getElementById("noneSubmit").style.display = "none";
 		} else document.getElementById("noneSubmit").style.display = "block";
@@ -118,6 +121,7 @@ const Registration = () => {
 					>
 						Заполните все поля
 					</p>
+
 					<button class="btn__submit" onClick={buttonSubmit}>
 						Отправить
 					</button>

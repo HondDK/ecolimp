@@ -1,7 +1,14 @@
 import React from "react";
 import ButtonCloseTest from "../components/UI/ButtonCloseTest/ButtonCloseTest";
+import { useNavigate } from "react-router-dom";
 
 const TestThree = () => {
+	let navigate = useNavigate();
+
+	const buttonSubmit = () => {
+		navigate("/testfour", { replace: true });
+	};
+
 	return (
 		<div>
 			<body class="test">
@@ -68,7 +75,9 @@ const TestThree = () => {
 						</div>
 					</div>
 					<div class="wrap__btn">
-						<ButtonCloseTest>Завершить задание</ButtonCloseTest>
+						<button className="btn__close-task" onClick={buttonSubmit}>
+							Завершить задание
+						</button>
 					</div>
 				</main>
 			</body>

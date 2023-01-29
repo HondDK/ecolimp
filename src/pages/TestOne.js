@@ -1,14 +1,13 @@
 import React, { useState } from "react";
 import ButtonCloseTest from "../components/UI/ButtonCloseTest/ButtonCloseTest";
 import ButtonReply from "../components/UI/ButtonReply/ButtonReply";
-import Select from "../components/UI/Select/Select";
 import Time from "../components/UI/Time/Time";
+import { useNavigate } from "react-router-dom";
 
 const TestOne = () => {
-	const [selectedButton, setSelectedButton] = useState(null);
-
-	const handleButtonClick = (button) => {
-		setSelectedButton(button);
+	let navigate = useNavigate();
+	const buttonSubmit = () => {
+		navigate("/testtwo", { replace: true });
 	};
 
 	return (
@@ -49,7 +48,10 @@ const TestOne = () => {
 						</p>
 						<ButtonReply></ButtonReply>
 					</div>
-					<ButtonCloseTest>Завершить задание</ButtonCloseTest>
+
+					<button className="btn__close-task" onClick={buttonSubmit}>
+						Завершить задание
+					</button>
 				</main>
 			</body>
 		</div>

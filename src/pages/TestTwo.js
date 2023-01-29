@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import ButtonCloseTest from "../components/UI/ButtonCloseTest/ButtonCloseTest";
+import { useNavigate } from "react-router-dom";
 
 const TestTwo = () => {
 	const [selectedButton, setSelectedButton] = useState(null);
@@ -7,6 +7,12 @@ const TestTwo = () => {
 	const handleButtonClick = (button) => {
 		setSelectedButton(button);
 	};
+
+	let navigate = useNavigate();
+	const buttonSubmit = () => {
+		navigate("/testtree", { replace: true });
+	};
+	
 	return (
 		<body class="test">
 			<header>
@@ -60,7 +66,9 @@ const TestTwo = () => {
 					</button>
 				</div>
 				<div class="wrap__btn">
-					<ButtonCloseTest>Завершить задание</ButtonCloseTest>
+					<button onClick={buttonSubmit} className="btn__close-task">
+						Завершить задание
+					</button>
 				</div>
 			</main>
 		</body>

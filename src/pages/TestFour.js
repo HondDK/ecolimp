@@ -84,7 +84,7 @@ const TestFour = () => {
 					</div>
 				</main>
 				<div class="wrap__btn">
-					<ButtonCloseTest>Завершить задание</ButtonCloseTest>
+					<button className="btn__close-task">Завершить задание</button>
 				</div>
 			</body>
 		</div>
