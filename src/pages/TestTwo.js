@@ -3,19 +3,30 @@ import { useNavigate } from "react-router-dom";
 import Time from "../components/UI/Time/Time";
 
 const TestTwo = () => {
+	let navigate = useNavigate();
+	const correctOption = [3];
+
 	const [selectedButton, setSelectedButton] = useState(null);
+	const [value, setValue] = useState();
+	const [min, setMin] = useState(0);
+	const [selectedOption, setSelectedOption] = useState("");
 
 	const handleButtonClick = (button) => {
 		setSelectedButton(button);
+		setSelectedOption(button);
 	};
 
-	let navigate = useNavigate();
-	const buttonSubmit = () => {
+	const buttonSubmit = (e) => {
+		e.preventDefault();
+		let correctCount = 0;
+
+		if (selectedOption == correctOption) {
+			correctCount++;
+		}
+
+		console.log(`правильных ${correctCount}`);
 		navigate("/testtree", { replace: true });
 	};
-
-	const [value, setValue] = useState();
-	const [min, setMin] = useState(0);
 
 	const handleChange = (value) => {
 		setValue(value);
