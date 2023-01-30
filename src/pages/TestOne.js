@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 const TestOne = () => {
 	let navigate = useNavigate();
-	const correctOptions = [1, 5, 6, 7];
+	const correctOptions = [1, 4, 6, 7];
 
 	const [value, setValue] = useState();
 	const [min, setMin] = useState(2);
