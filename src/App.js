@@ -3,6 +3,7 @@ import TestOne from "./pages/TestOne";
 import TestTwo from "./pages/TestTwo";
 import TestTree from "./pages/TestThree";
 import TestFour from "./pages/TestFour";
+import TestFive from "./pages/TestFive";
 import Registration from "./pages/Registration";
 import ErrorPage from "./pages/ErrorPage";
 import "./style/style.scss";
@@ -34,16 +35,20 @@ const router = createBrowserRouter([
 		path: "/testfour",
 		element: <TestFour></TestFour>,
 	},
+	{
+		path: "/testfive",
+		element: <TestFive></TestFive>,
+	},
 ]);
 
-function handleCopy(e) {
-	e.preventDefault();
-	alert("Текст нельзя копировать!");
-}
+// function handleCopy(e) {
+// 	e.preventDefault();
+// 	alert("Текст нельзя копировать!");
+// }
 
 function App() {
 	return (
-		<div className="App" onCopy={handleCopy}>
+		<div className="App" >
 			<RouterProvider router={router} />
 		</div>
 	);

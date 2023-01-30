@@ -17,7 +17,10 @@ const TestFive = () => {
 					Определите, при каких значениях цены и объема продаж фирма получит
 					максимальную прибыль.
 				</div>
-				<div class="divTable" style="width: 100%; border: 1px solid #000; ">
+				<div
+					class="divTable"
+					style={{ width: "100%", border: "1px solid #000" }}
+				>
 					<div class="divTableBody">
 						<div class="divTableRow">
 							<div class="divTableCell">Объем продаж (Q), ед.&nbsp;</div>
@@ -45,7 +48,7 @@ const TestFive = () => {
 							<div class="divTableCell">1</div>
 							<div class="divTableCell">&nbsp;175</div>
 							<div class="divTableCell">
-								<span style="font-weight: 400;">260</span>
+								<span style={{ fontWeight: "400" }}>260</span>
 							</div>
 							<div class="divTableCell">
 								<input type="number" />
@@ -63,10 +66,10 @@ const TestFive = () => {
 						<div class="divTableRow">
 							<div class="divTableCell">2</div>
 							<div class="divTableCell">
-								&nbsp;<span style="font-weight: 400;">150</span>
+								&nbsp;<span style={{ fontWeight: "400" }}>150</span>
 							</div>
 							<div class="divTableCell">
-								<span style="font-weight: 400;">320</span>
+								<span style={{ fontWeight: "400" }}>320</span>
 							</div>
 							<div class="divTableCell">
 								<input type="number" />
@@ -84,10 +87,10 @@ const TestFive = () => {
 						<div class="divTableRow">
 							<div class="divTableCell">3</div>
 							<div class="divTableCell">
-								&nbsp;<span style="font-weight: 400;">135</span>
+								&nbsp;<span style={{ fontWeight: "400" }}>135</span>
 							</div>
 							<div class="divTableCell">
-								<span style="font-weight: 400;">366</span>
+								<span style={{ fontWeight: "400" }}>366</span>
 							</div>
 							<div class="divTableCell">
 								<input type="number" />
@@ -105,10 +108,10 @@ const TestFive = () => {
 						<div class="divTableRow">
 							<div class="divTableCell">4</div>
 							<div class="divTableCell">
-								&nbsp;<span style="font-weight: 400;">120</span>
+								&nbsp;<span style={{ fontWeight: "400" }}>120</span>
 							</div>
 							<div class="divTableCell">
-								&nbsp;<span style="font-weight: 400;">400</span>
+								&nbsp;<span style={{ fontWeight: "400" }}>400</span>
 							</div>
 							<div class="divTableCell">
 								<input type="number" />
@@ -126,10 +129,10 @@ const TestFive = () => {
 						<div class="divTableRow">
 							<div class="divTableCell">5</div>
 							<div class="divTableCell">
-								&nbsp;<span style="font-weight: 400;">105</span>
+								&nbsp;<span style={{ fontWeight: "400" }}>105</span>
 							</div>
 							<div class="divTableCell">
-								&nbsp;<span style="font-weight: 400;">445</span>
+								&nbsp;<span style={{ fontWeight: "400" }}>445</span>
 							</div>
 							<div class="divTableCell">
 								<input type="number" />
@@ -147,10 +150,10 @@ const TestFive = () => {
 						<div class="divTableRow">
 							<div class="divTableCell">6</div>
 							<div class="divTableCell">
-								&nbsp;&nbsp;<span style="font-weight: 400;">90</span>
+								&nbsp;&nbsp;<span style={{ fontWeight: "400" }}>90</span>
 							</div>
 							<div class="divTableCell">
-								&nbsp;<span style="font-weight: 400;">510</span>
+								&nbsp;<span style={{ fontWeight: "400" }}>510</span>
 							</div>
 							<div class="divTableCell">
 								<input type="number" />
