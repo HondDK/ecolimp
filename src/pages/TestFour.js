@@ -15,6 +15,11 @@ const TestFour = () => {
 		}
 	};
 
+	const buttonSubmit = (e) => {
+		e.preventDefault();
+
+		navigate("/testfive", { replace: true });
+	};
 	return (
 		<div>
 			<body class="test">
@@ -97,7 +102,9 @@ const TestFour = () => {
 					</div>
 				</main>
 				<div class="wrap__btn">
-					<button className="btn__close-task">Завершить задание</button>
+					<button className="btn__close-task" onClick={buttonSubmit}>
+						Завершить задание
+					</button>
 				</div>
 			</body>
 		</div>

@@ -41,15 +41,15 @@ const router = createBrowserRouter([
 	},
 ]);
 
-// function handleCopy(e) {
-// 	e.preventDefault();
-// 	alert("Текст нельзя копировать!");
-// }
+function handleCopy(e) {
+	e.preventDefault();
+	alert("Текст нельзя копировать!");
+}
 
 function App() {
 	return (
-		<div className="App" >
-			<RouterProvider router={router} />
+		<div className="App">
+			<RouterProvider router={router} onCopy={handleCopy} />
 		</div>
 	);
 }
