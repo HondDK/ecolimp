@@ -1,6 +1,10 @@
 import React, { useState } from "react";
+import Time from "../components/UI/Time/Time";
 
 const TestFive = () => {
+	const [min, setMin] = useState(24);
+	const [value, setValue] = useState();
+
 	const [value1, setValue1] = useState("");
 	const [value2, setValue2] = useState("");
 	const [value3, setValue3] = useState("");
@@ -55,7 +59,9 @@ const TestFive = () => {
 
 	const buttonSubmit = (e) => {
 		e.preventDefault();
+
 		let correctCount = 0;
+
 		const values = [
 			value1,
 			value2,
@@ -89,12 +95,19 @@ const TestFive = () => {
 		console.log(correctCount);
 	};
 
+	const handleChange = (value) => {
+		//setValue(value);
+		if (value == false) {
+			//navigate("/testtwo", { replace: true });
+		}
+	};
+
 	return (
 		<body class="test">
 			<header class="test5-header">
 				<h1>Практическое задание №5</h1>
 				<p>
-					25:<span class="time">00</span>
+					<Time min={min} onChange={handleChange} />
 				</p>
 			</header>
 
