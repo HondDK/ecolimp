@@ -10,7 +10,7 @@ const TestOne = () => {
 	const [value, setValue] = useState();
 	const [min, setMin] = useState(2);
 	const [selectedOption, setSelectedOption] = useState("");
-	const [isCorrect, setIsCorrect] = useState(false);
+	const [correctCount, setСorrectCount] = useState(0);
 	const [selectedButtons, setSelectedButtons] = useState([]);
 
 	const handleButtonClick = (button) => {
@@ -40,11 +40,12 @@ const TestOne = () => {
 
 	const buttonSubmit = (e) => {
 		e.preventDefault();
-		const correctCount = selectedOption.filter((option) =>
-			correctOptions.includes(option)
+		const correctCount = selectedOption.filter((e) =>
+			correctOptions.includes(e)
 		).length;
+
 		console.log(`правильных ${correctCount}`);
-		//navigate("/testtwo", { replace: true });
+		navigate("/testtwo", { replace: true });
 	};
 
 	return (
@@ -52,7 +53,7 @@ const TestOne = () => {
 			<body class="test">
 				<header>
 					<h1>Практическое задание №1</h1>
-					{/* <Time min={min} onChange={handleChange} /> */}
+					<Time min={min} onChange={handleChange} />
 				</header>
 				<main class="main__test">
 					<div class="test-title">
