@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import Time from "../components/UI/Time/Time";
-
+import { useTranslation } from "react-i18next";
 const TestFive = () => {
+	const { t, i18n } = useTranslation();
+
 	const [min, setMin] = useState(24);
 	const [value, setValue] = useState();
 
@@ -105,36 +107,27 @@ const TestFive = () => {
 	return (
 		<body class="test">
 			<header class="test5-header">
-				<h1>Практическое задание №5</h1>
+				<h1>{t("work5content")}</h1>
 				<p>
 					<Time min={min} onChange={handleChange} />
 				</p>
 			</header>
 
 			<main class="main__test">
-				<div class="text">
-					В таблице представлена информация об издержках и уровне продаж фирмы.
-					Рассчитайте предельные издержки фирмы, общий и предельный доход.
-					Определите, при каких значениях цены и объема продаж фирма получит
-					максимальную прибыль.
-				</div>
+				<div class="text">{t("task5")}</div>
 				<div
 					class="divTable"
 					style={{ width: "100%", border: "1px solid #000" }}
 				>
 					<div class="divTableBody">
 						<div class="divTableRow">
-							<div class="divTableCell">Объем продаж (Q), ед.&nbsp;</div>
-							<div class="divTableCell">Цена за единицу изделия (Р), у.е.</div>
-							<div class="divTableCell">Общие издержки (TC), у.е.&nbsp;</div>
-							<div class="divTableCell">
-								&nbsp;Предельные издержки (MC), у.е.
-							</div>
-							<div class="divTableCell">Общий доход (TR), у.е.&nbsp;</div>
-							<div class="divTableCell">Предельный доход (МR), у.е.</div>
-							<div class="divTableCell">
-								Условие равновесия фирмы (соотношение МС и МR)&nbsp;
-							</div>
+							<div class="divTableCell">{t("task5-question1")}&nbsp;</div>
+							<div class="divTableCell">{t("task5-question2")}</div>
+							<div class="divTableCell">{t("task5-question3")}&nbsp;</div>
+							<div class="divTableCell">&nbsp;{t("task5-question4")}</div>
+							<div class="divTableCell">{t("task5-question5")}&nbsp;</div>
+							<div class="divTableCell">{t("task5-question6")}</div>
+							<div class="divTableCell">{t("task5-question7")}&nbsp;</div>
 						</div>
 						<div class="divTableRow">
 							<div class="divTableCell">0</div>
@@ -369,7 +362,7 @@ const TestFive = () => {
 				</div>
 				<div class="wrap__btn">
 					<button class="btn__complete" onClick={buttonSubmit}>
-						Завершить задание
+						{t("closeTask")}
 					</button>
 				</div>
 			</main>

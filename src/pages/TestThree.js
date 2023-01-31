@@ -1,10 +1,12 @@
 import { useState } from "react";
 import Time from "../components/UI/Time/Time";
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const TestThree = () => {
 	let navigate = useNavigate();
 	const correctValues = [1, 2, 4, 6, 3, 5, 7];
+	const { t, i18n } = useTranslation();
 
 	const [value, setValue] = useState();
 	const [min, setMin] = useState(9);
@@ -40,51 +42,25 @@ const TestThree = () => {
 		<div>
 			<body class="test">
 				<header>
-					<h1>Практическое задание №3</h1>
+					<h1>{t("work3content")}</h1>
 					<p>
 						<Time min={min} onChange={handleChange} />
 					</p>
 				</header>
 				<main class="main__test">
-					<div class="text">
-						Укажите какие из приведенных ниже утверждений характеризуют признаки
-						натурального хозяйства, а какие - товарного производства:
-					</div>
+					<div class="text">{t("task3")}</div>
 					<ol>
-						<li>
-							В замкнутой экономической единице ведется производство готового
-							продукта и его потребление;
-						</li>
-						<li>
-							Трудовой процесс базируется на традиционных обычаях, принудительно
-							устанавливаемых хозяйственных связях в рамках отдельной общности;
-						</li>
-						<li>
-							Производство основано как на индивидуальном труде собственника,
-							так и на применении им наемной рабочей силы;
-						</li>
-						<li>
-							Процесс производства ведется с применением малопроизводительных
-							орудий труда, не дающих дополнительного продукта, сверх
-							необходимого для потребления самих производителей;
-						</li>
-						<li>
-							Изготовленная продукция принадлежит собственнику и предназначена
-							для свободной реализации на рынке;
-						</li>
-						<li>
-							Экономическая эволюция происходит очень медленно, отдельные
-							усовершенствования и преобразования могут совершаться столетиями;
-						</li>
-						<li>
-							Быстрый экономический прогресс общества является следствием
-							высоких темпов роста производительности труда и динамического
-							расширения ассортимента продукции.
-						</li>
+						<li>{t("task3-question1")}</li>
+						<li>{t("task3-question2")}</li>
+						<li>{t("task3-question3")}</li>
+						<li>{t("task3-question4")}</li>
+						<li>{t("task3-question5")}</li>
+						<li>{t("task3-question6")}</li>
+						<li>{t("task3-question7")}</li>
 					</ol>
 					<div class="container">
 						<div class="container__button">
-							<div class="container__box">Натуральное хозяйство</div>
+							<div class="container__box">{t("task3-question8")}</div>
 							<div class="container__inputs">
 								<input
 									type="text"
@@ -109,7 +85,7 @@ const TestThree = () => {
 							</div>
 						</div>
 						<div class="container__button">
-							<div class="container__box">Товарное производство </div>
+							<div class="container__box">{t("task3-question9")} </div>
 							<div class="container__inputs">
 								<input
 									type="text"
@@ -131,7 +107,7 @@ const TestThree = () => {
 					</div>
 					<div class="wrap__btn">
 						<button className="btn__close-task" onClick={buttonSubmit}>
-							Завершить задание
+							{t("closeTask")}
 						</button>
 					</div>
 				</main>
