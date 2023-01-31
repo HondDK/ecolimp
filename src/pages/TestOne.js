@@ -2,9 +2,11 @@ import React, { useState, useEffect } from "react";
 import ButtonReply from "../components/UI/ButtonReply/ButtonReply";
 import Time from "../components/UI/Time/Time";
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const TestOne = () => {
 	let navigate = useNavigate();
+	const { t, i18n } = useTranslation();
 	const correctOptions = [1, 4, 6, 7];
 
 	const [value, setValue] = useState();
@@ -52,20 +54,21 @@ const TestOne = () => {
 		<div>
 			<body class="test">
 				<header>
-					<h1>Практическое задание №1</h1>
+					{/* <select onChange={(e) => i18n.changeLanguage(e.target.value)}>
+						<option>Choose language</option>
+						<option value="kz">Kazakh</option>
+						<option value="ru">Russian</option>
+						<option value="en">English</option>
+					</select> */}
+					<h1>{t("work1content")}</h1>
 					<Time min={min} onChange={handleChange} />
 				</header>
 				<main class="main__test">
 					<div class="test-title">
-						<p class="p__test-text">
-							Определите позитивное и нормативное утверждение:
-						</p>
+						<p class="p__test-text">{t("task")}</p>
 					</div>
 					<div class="test-term">
-						<p class="p__test-text">
-							Необходимо разработать комплекс мер по замедлению или прекращению
-							спада производства и снижению темпов инфляции
-						</p>
+						<p class="p__test-text">{t("question1")}</p>
 						<div>
 							<button
 								style={{
@@ -75,7 +78,7 @@ const TestOne = () => {
 								}}
 								onClick={() => handleButtonClick(1)}
 							>
-								Нормативная
+								{t("regulatory")}
 							</button>
 							<button
 								style={{
@@ -85,13 +88,10 @@ const TestOne = () => {
 								}}
 								onClick={() => handleButtonClick(2)}
 							>
-								Позитивная
+								{t("positive")}
 							</button>
 						</div>
-						<p class="p__test-text">
-							За последнее время в экономике страны наблюдается спад
-							производства и высокие темпы инфляции
-						</p>
+						<p class="p__test-text">{t("question2")}</p>
 						<div>
 							<button
 								style={{
@@ -101,7 +101,7 @@ const TestOne = () => {
 								}}
 								onClick={() => handleButtonClick(3)}
 							>
-								Нормативная
+								{t("regulatory")}
 							</button>
 							<button
 								style={{
@@ -111,13 +111,10 @@ const TestOne = () => {
 								}}
 								onClick={() => handleButtonClick(4)}
 							>
-								Позитивная
+								{t("positive")}
 							</button>
 						</div>
-						<p class="p__test-text">
-							Структурная перестройка экономики страны, помимо других целей,
-							направлена на повышение уровня потребления людей
-						</p>
+						<p class="p__test-text">{t("question3")}</p>
 						<div>
 							<button
 								style={{
@@ -127,7 +124,7 @@ const TestOne = () => {
 								}}
 								onClick={() => handleButtonClick(5)}
 							>
-								Нормативная
+								{t("regulatory")}
 							</button>
 							<button
 								style={{
@@ -137,16 +134,10 @@ const TestOne = () => {
 								}}
 								onClick={() => handleButtonClick(6)}
 							>
-								Позитивная
+								{t("positive")}
 							</button>
 						</div>
-						<p class="p__test-text">
-							Осуществление структурной перестройки неизбежно ведет к разрушению
-							эгалитаризма, господствующего в мышлении многих людей, резкому
-							росту безработицы, что потенциально влечет за собой социальную
-							дестабилизации, и поэтому структурная перестройка должна
-							осуществляться постепенно
-						</p>
+						<p class="p__test-text">{t("question4")}</p>
 						<div>
 							<button
 								style={{
@@ -156,7 +147,7 @@ const TestOne = () => {
 								}}
 								onClick={() => handleButtonClick(7)}
 							>
-								Нормативная
+								{t("regulatory")}
 							</button>
 							<button
 								style={{
@@ -166,13 +157,13 @@ const TestOne = () => {
 								}}
 								onClick={() => handleButtonClick(8)}
 							>
-								Позитивная
+								{t("positive")}
 							</button>
 						</div>
 					</div>
 
 					<button className="btn__close-task" onClick={buttonSubmit}>
-						Завершить задание
+						{t("closeTask")}
 					</button>
 				</main>
 			</body>

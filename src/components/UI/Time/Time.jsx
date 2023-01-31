@@ -7,7 +7,7 @@ const Time = ({ onChange, min }) => {
 	const [timerActive, setTimerActive] = useState(true);
 
 	const handleChange = () => {
-		onChange(timerActive); // callback-функция
+		onChange(timerActive);
 	};
 
 	React.useEffect(() => {

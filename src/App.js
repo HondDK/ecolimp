@@ -9,6 +9,7 @@ import ErrorPage from "./pages/ErrorPage";
 import "./style/style.scss";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
+
 const router = createBrowserRouter([
 	{
 		path: "/",
@@ -47,6 +48,7 @@ function handleCopy(e) {
 }
 
 function App() {
+	
 	return (
 		<div className="App">
 			<RouterProvider router={router} onCopy={handleCopy} />
