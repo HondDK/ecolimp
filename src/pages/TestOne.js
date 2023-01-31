@@ -4,9 +4,11 @@ import Time from "../components/UI/Time/Time";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
-const TestOne = () => {
+const TestOne = (props) => {
 	let navigate = useNavigate();
 	const { t, i18n } = useTranslation();
+	i18n.changeLanguage(props.language);
+
 	const correctOptions = [1, 4, 6, 7];
 
 	const [value, setValue] = useState();
@@ -51,6 +53,7 @@ const TestOne = () => {
 	};
 
 	return (
+		
 		<div>
 			<body class="test">
 				<header>
