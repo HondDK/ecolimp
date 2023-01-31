@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import ButtonReply from "../components/UI/ButtonReply/ButtonReply";
 import Time from "../components/UI/Time/Time";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
@@ -37,6 +36,7 @@ const TestOne = (props) => {
 
 	const handleChange = (value) => {
 		setValue(value);
+
 		if (value == false) {
 			navigate("/testtwo", { replace: true });
 		}
@@ -53,16 +53,9 @@ const TestOne = (props) => {
 	};
 
 	return (
-		
 		<div>
 			<body class="test">
 				<header>
-					{/* <select onChange={(e) => i18n.changeLanguage(e.target.value)}>
-						<option>Choose language</option>
-						<option value="kz">Kazakh</option>
-						<option value="ru">Russian</option>
-						<option value="en">English</option>
-					</select> */}
 					<h1>{t("work1content")}</h1>
 					<Time min={min} onChange={handleChange} />
 				</header>

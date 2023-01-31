@@ -1,10 +1,19 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const Time = ({ onChange, min }) => {
-	const [seconds, setSeconds] = useState(60);
-	const [minutes, setMinutes] = useState(min);
+	const [seconds, setSeconds] = useState(
+		() => sessionStorage.getItem("seconds") || 60
+	);
+	const [minutes, setMinutes] = useState(
+		() => sessionStorage.getItem("minutes") || min
+	);
 	const [timerActive, setTimerActive] = useState(true);
+
+	useEffect(() => {
+		sessionStorage.setItem("seconds", seconds);
+		sessionStorage.setItem("minutes", minutes);
+	}, [seconds]);
 
 	const handleChange = () => {
 		onChange(timerActive);
@@ -17,14 +26,10 @@ const Time = ({ onChange, min }) => {
 			handleChange();
 			setTimerActive(false);
 		} else {
-			secondReset();
+			setSeconds(60);
+			setMinutes(minutes - 1);
 		}
 	}, [seconds, timerActive]);
-
-	const secondReset = () => {
-		setSeconds(60);
-		setMinutes(minutes - 1);
-	};
 
 	return (
 		<div>

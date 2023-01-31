@@ -6,6 +6,7 @@ import TestFour from "./pages/TestFour";
 import TestFive from "./pages/TestFive";
 import Registration from "./pages/Registration";
 import ErrorPage from "./pages/ErrorPage";
+import Final from "./pages/Final";
 import "./style/style.scss";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
@@ -38,6 +39,10 @@ const router = createBrowserRouter([
 	{
 		path: "/testfive",
 		element: <TestFive></TestFive>,
+	},
+	{
+		path: "/final",
+		element: <Final></Final>,
 	},
 ]);
 
