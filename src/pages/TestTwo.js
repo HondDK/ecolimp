@@ -6,7 +6,7 @@ const TestTwo = () => {
 	let navigate = useNavigate();
 	const correctOption = [3];
 	const { t, i18n } = useTranslation();
-	
+
 	const [selectedButton, setSelectedButton] = useState(null);
 	const [value, setValue] = useState();
 	const [min, setMin] = useState(0);
@@ -39,7 +39,7 @@ const TestTwo = () => {
 	return (
 		<body class="test">
 			<header>
-				<h1>work2content</h1>
+				<h1>{t("work2content")}</h1>
 				<p>
 					<Time min={min} onChange={handleChange} />
 				</p>
