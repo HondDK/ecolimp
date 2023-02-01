@@ -35,8 +35,8 @@ const TestTwo = () => {
 	const handleChange = (value) => {
 		setValue(value);
 		if (value == false) {
-			removeSessionStorage();
 			navigate("/testtree", { replace: true });
+			removeSessionStorage();
 		}
 	};
 

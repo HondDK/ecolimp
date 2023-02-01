@@ -12,8 +12,8 @@ const TestFour = () => {
 	const handleChange = (value) => {
 		setValue(value);
 		if (value == false) {
-			removeSessionStorage();
 			navigate("/testfive", { replace: true });
+			removeSessionStorage();
 		}
 	};
 

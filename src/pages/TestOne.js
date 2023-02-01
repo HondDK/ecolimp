@@ -39,8 +39,8 @@ const TestOne = (props) => {
 		setValue(value);
 
 		if (value == false) {
-			removeSessionStorage();
 			navigate("/testtwo", { replace: true });
+			removeSessionStorage();
 		}
 	};
 
