@@ -1,8 +1,12 @@
 import React, { useState } from "react";
 import Time from "../components/UI/Time/Time";
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 import { removeSessionStorage } from "../libs/helpers/removeSessionStorage";
+
 const TestFive = () => {
+	let navigate = useNavigate();
+
 	const { t, i18n } = useTranslation();
 
 	const [min, setMin] = useState(24);
@@ -95,14 +99,15 @@ const TestFive = () => {
 		for (let i = 0; i < values.length; i++) {
 			if (values[i].toLowerCase() === correctValues[i]) correctCount++;
 		}
+		navigate("/final", { replace: true });
 		console.log(correctCount);
 	};
 
 	const handleChange = (value) => {
-		//setValue(value);
+		setValue(value);
 		if (value == false) {
 			removeSessionStorage();
-			//navigate("/final", { replace: true });
+			navigate("/final", { replace: true });
 		}
 	};
 

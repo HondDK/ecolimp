@@ -8,6 +8,7 @@ const Language = () => {
 
 	const buttonSubmit = (e) => {
 		i18n.changeLanguage(e);
+		sessionStorage.setItem("lang", e);
 		navigate("/testone", { replace: true });
 	};
 	return (
