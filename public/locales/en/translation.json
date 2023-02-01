@@ -1,4 +1,18 @@
 {
+
+	"header":"Olympiad on the basics of economics",
+
+
+	"surname": "Surname",
+	"name": "Name",
+	"patronymic": "Patronymic",
+	"institution": "Institution",
+	"prof": "Profession",
+	"course": "Course",
+
+	"send": "Send",
+	"error": "Fill in all the fields",
+
 	"work1content": "Practical task №1",
 	"task": "Define a positive and normative statement:",
 	"question1": "It is necessary to develop a set of measures to slow down or stop the decline in production and reduce the rate of inflation",
@@ -36,5 +50,10 @@
 	"task5-question4": "Marginal costs (MC), units",
 	"task5-question5": "Total income (TR), units",
 	"task5-question6": "Marginal income (MR), cu.",
-	"task5-question7": "The equilibrium condition of the firm (the ratio of MS and MR)"
+	"task5-question7": "The equilibrium condition of the firm (the ratio of MS and MR)",
+
+	"result": "Test results",
+	"site": "Participant",
+	"timeZ": "Task completion time, minutes",
+	"allResult": "Overall result"
 }

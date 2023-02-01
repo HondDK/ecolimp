@@ -1,10 +1,13 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 const Final = () => {
+	const { t, i18n } = useTranslation();
+
 	return (
 		<div>
 			<main className="main_final">
-				<header>Результаты Теста</header>
+				<header>{t("result")}</header>
 				<div
 					class="divTable"
 					style={{
@@ -19,10 +22,10 @@ const Final = () => {
 								style={{ width: "250px", height: "50px" }}
 								class="divTableCell2 tableCell"
 							>
-								&nbsp;<strong>Участник</strong>
+								&nbsp;<strong>{t("site")}</strong>
 							</div>
 							<div style={{ width: "130px" }} class="divTableCell2 tableCell2">
-								&nbsp;<strong>Время выполнения заданий, минут</strong>
+								&nbsp;<strong>{t("timeZ")}</strong>
 							</div>
 							<div class="divTableCell2 tableCell">
 								<strong>№ 1</strong>&nbsp;
@@ -40,22 +43,22 @@ const Final = () => {
 								<strong>№ 5</strong>&nbsp;
 							</div>
 							<div style={{ width: "150px" }} class="divTableCell2 tableCell">
-								<strong>Общий результат</strong>&nbsp;
+								<strong>{t("allResult")}</strong>&nbsp;
 							</div>
 						</div>
 						<div class="divTableRow">
 							<div class="divTableCell2 eTableCell">
-								&nbsp;<strong>Фамилия</strong>
+								&nbsp;<strong>{t("surname")}</strong>
 								<br />
-								<strong>Имя</strong>
+								<strong>{t("name")}</strong>
 								<br />
-								<strong>Отчество</strong>
+								<strong>{t("patronymic")}</strong>
 								<br />
-								<strong>Наименование учебной организации</strong>
+								<strong>{t("institution")}</strong>
 								<br />
-								<strong>Специальность</strong>
+								<strong>{t("prof")}</strong>
 								<br />
-								<strong>Курс</strong>
+								<strong>{t("course")}</strong>
 							</div>
 							<div class="divTableCell2">&nbsp;</div>
 							<div class="divTableCell2">&nbsp;</div>

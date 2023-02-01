@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const Registration = () => {
 	const [surname, setSurname] = useState("");
@@ -12,6 +13,9 @@ const Registration = () => {
 	const [time, setTime] = useState("");
 	let navigate = useNavigate();
 	let isAuth;
+
+	const { t, i18n } = useTranslation();
+
 	React.useEffect(() => {
 		document.getElementById("noneSubmit").style.display = "none";
 		currentTime();
@@ -57,10 +61,10 @@ const Registration = () => {
 	return (
 		<div>
 			<body>
-				<header>Олимпида по основам экономики</header>
+				<header>{t("header")}</header>
 				<form class="content" name="google-sheet">
 					<div class="content__widget">
-						<p>Фамилия </p>
+						<p>{t("surname")}</p>
 						<input
 							name="Surname"
 							type={"text"}
@@ -68,7 +72,7 @@ const Registration = () => {
 								setSurname(e.target.value);
 							}}
 						/>
-						<p>Имя</p>
+						<p>{t("name")}</p>
 						<input
 							name="Name"
 							type={"text"}
@@ -76,7 +80,7 @@ const Registration = () => {
 								setName(e.target.value);
 							}}
 						/>
-						<p>Отчество</p>
+						<p>{t("patronymic")}</p>
 						<input
 							name="Patronymic"
 							type={"text"}
@@ -84,7 +88,7 @@ const Registration = () => {
 								setPatronymic(e.target.value);
 							}}
 						/>
-						<p>Наименование учебной организации</p>
+						<p>{t("institution")}</p>
 						<input
 							name="Institution"
 							type={"text"}
@@ -92,7 +96,7 @@ const Registration = () => {
 								setInstitution(e.target.value);
 							}}
 						/>
-						<p>Специальность</p>
+						<p>{t("prof")}</p>
 						<input
 							name="Profession"
 							type={"text"}
@@ -100,7 +104,7 @@ const Registration = () => {
 								setProfession(e.target.value);
 							}}
 						/>
-						<p>Курс</p>
+						<p>{t("course")}</p>
 						<input
 							name="Course"
 							type={"number"}
@@ -119,11 +123,11 @@ const Registration = () => {
 						id="noneSubmit"
 						style={{ color: "red", textAlign: "center", fontSize: "20px" }}
 					>
-						Заполните все поля
+						{t("error")}
 					</p>
 
 					<button class="btn__submit" onClick={buttonSubmit}>
-						Отправить
+						{t("send")}
 					</button>
 				</form>
 			</body>
