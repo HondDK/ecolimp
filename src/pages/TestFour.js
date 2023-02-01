@@ -20,6 +20,7 @@ const TestFour = () => {
 	const buttonSubmit = (e) => {
 		e.preventDefault();
 		removeSessionStorage();
+
 		navigate("/testfive", { replace: true });
 	};
 	return (

@@ -47,14 +47,27 @@ const Registration = () => {
 
 	const buttonSubmit = (e) => {
 		e.preventDefault();
+
 		let inputs = Array.from(document.querySelectorAll("input"));
 		let inputsValueTrue = inputs.every((input) => input.value);
+
 		if (inputsValueTrue) {
+		
 			Submit(e);
+
+			sessionStorage.setItem("surname", surname);
+			sessionStorage.setItem("name", name);
+			sessionStorage.setItem("patronymic", patronymic);
+			sessionStorage.setItem("institution", institution);
+			sessionStorage.setItem("profession", profession);
+			sessionStorage.setItem("course", course);
+			sessionStorage.setItem("time", time);
+
 			navigate("/testone", { replace: true });
 			isAuth = true;
 			console.log(surname, name, patronymic, institution, profession, course);
 			document.getElementById("noneSubmit").style.display = "none";
+			
 		} else document.getElementById("noneSubmit").style.display = "block";
 	};
 

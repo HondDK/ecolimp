@@ -38,6 +38,7 @@ const TestThree = () => {
 			if (parseInt(values[i]) === correctValues[i]) correctCount++;
 		}
 		removeSessionStorage();
+		sessionStorage.setItem("correct3", correctCount);
 		console.log(correctCount);
 		navigate("/testfour", { replace: true });
 	};

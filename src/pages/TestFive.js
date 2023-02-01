@@ -99,6 +99,7 @@ const TestFive = () => {
 		for (let i = 0; i < values.length; i++) {
 			if (values[i].toLowerCase() === correctValues[i]) correctCount++;
 		}
+		sessionStorage.setItem("correct5", correctCount);
 		navigate("/final", { replace: true });
 		console.log(correctCount);
 	};

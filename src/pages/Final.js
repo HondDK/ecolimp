@@ -4,6 +4,12 @@ import { useTranslation } from "react-i18next";
 const Final = () => {
 	const { t, i18n } = useTranslation();
 
+	const correct1 = sessionStorage.getItem("correct1");
+	const correct2 = sessionStorage.getItem("correct2");
+	const correct3 = sessionStorage.getItem("correct3");
+	//const correct4 = sessionStorage.getItem("correct4");
+	const correct5 = sessionStorage.getItem("correct5");
+
 	return (
 		<div>
 			<main className="main_final">
@@ -48,25 +54,31 @@ const Final = () => {
 						</div>
 						<div class="divTableRow">
 							<div class="divTableCell2 eTableCell">
-								&nbsp;<strong>{t("surname")}</strong>
+								&nbsp;<strong>{sessionStorage.getItem("surname")}</strong>
 								<br />
-								<strong>{t("name")}</strong>
+								<strong>{sessionStorage.getItem("name")}</strong>
 								<br />
-								<strong>{t("patronymic")}</strong>
+								<strong>{sessionStorage.getItem("patronymic")}</strong>
 								<br />
-								<strong>{t("institution")}</strong>
+								<strong>{sessionStorage.getItem("institution")}</strong>
 								<br />
-								<strong>{t("prof")}</strong>
+								<strong>{sessionStorage.getItem("profession")}</strong>
 								<br />
-								<strong>{t("course")}</strong>
+								<strong>{sessionStorage.getItem("course")}</strong>
 							</div>
-							<div class="divTableCell2">&nbsp;</div>
-							<div class="divTableCell2">&nbsp;</div>
-							<div class="divTableCell2">&nbsp;</div>
-							<div class="divTableCell2">&nbsp;</div>
-							<div class="divTableCell2">&nbsp;</div>
-							<div class="divTableCell2">&nbsp;</div>
-							<div class="divTableCell2">&nbsp;</div>
+							<div class="divTableCell2">123&nbsp;</div>
+							<div class="divTableCell2">{correct1}&nbsp;</div>
+							<div class="divTableCell2">{correct2}&nbsp;</div>
+							<div class="divTableCell2">{correct3}&nbsp;</div>
+							<div class="divTableCell2">{correct1}&nbsp;</div>
+							<div class="divTableCell2">{correct5}&nbsp;</div>
+							<div class="divTableCell2">
+								{Number(correct1) +
+									Number(correct2) +
+									Number(correct3) +
+									Number(correct5)}
+								&nbsp;
+							</div>
 						</div>
 					</div>
 				</div>

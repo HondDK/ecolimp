@@ -50,6 +50,7 @@ const TestOne = (props) => {
 			correctOptions.includes(e)
 		).length;
 		removeSessionStorage();
+		sessionStorage.setItem("correct1", correctCount);
 		console.log(`правильных ${correctCount}`);
 		navigate("/testtwo", { replace: true });
 	};

@@ -6,7 +6,7 @@ import { removeSessionStorage } from "../libs/helpers/removeSessionStorage";
 
 const TestTwo = () => {
 	let navigate = useNavigate();
-	const correctOption = [3];
+	const correctOption = [2];
 	const { t, i18n } = useTranslation();
 
 	const [selectedButton, setSelectedButton] = useState(null);
@@ -27,6 +27,7 @@ const TestTwo = () => {
 			correctCount++;
 		}
 		removeSessionStorage();
+		sessionStorage.setItem("correct2", correctCount);
 		console.log(`правильных ${correctCount}`);
 		navigate("/testtree", { replace: true });
 	};
