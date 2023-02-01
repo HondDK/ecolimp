@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Time from "../components/UI/Time/Time";
 import { useTranslation } from "react-i18next";
+import { removeSessionStorage } from "../libs/helpers/removeSessionStorage";
+
 const TestTwo = () => {
 	let navigate = useNavigate();
 	const correctOption = [3];
@@ -24,7 +26,7 @@ const TestTwo = () => {
 		if (selectedOption == correctOption) {
 			correctCount++;
 		}
-
+		removeSessionStorage();
 		console.log(`правильных ${correctCount}`);
 		navigate("/testtree", { replace: true });
 	};
@@ -32,6 +34,7 @@ const TestTwo = () => {
 	const handleChange = (value) => {
 		setValue(value);
 		if (value == false) {
+			removeSessionStorage();
 			navigate("/testtree", { replace: true });
 		}
 	};

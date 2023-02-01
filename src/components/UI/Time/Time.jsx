@@ -8,6 +8,7 @@ const Time = ({ onChange, min }) => {
 	const [minutes, setMinutes] = useState(
 		() => sessionStorage.getItem("minutes") || min
 	);
+
 	const [timerActive, setTimerActive] = useState(true);
 
 	useEffect(() => {

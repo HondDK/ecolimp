@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 import Time from "../components/UI/Time/Time";
 import { useNavigate } from "react-router-dom";
+import { removeSessionStorage } from "../libs/helpers/removeSessionStorage";
 
 const TestFour = () => {
 	const [value, setValue] = useState();
@@ -11,13 +12,14 @@ const TestFour = () => {
 	const handleChange = (value) => {
 		setValue(value);
 		if (value == false) {
-			navigate("/testfour", { replace: true });
+			removeSessionStorage();
+			navigate("/testfive", { replace: true });
 		}
 	};
 
 	const buttonSubmit = (e) => {
 		e.preventDefault();
-
+		removeSessionStorage();
 		navigate("/testfive", { replace: true });
 	};
 	return (

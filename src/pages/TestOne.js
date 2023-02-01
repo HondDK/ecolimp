@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Time from "../components/UI/Time/Time";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { removeSessionStorage } from "../libs/helpers/removeSessionStorage";
 
 const TestOne = (props) => {
 	let navigate = useNavigate();
@@ -38,6 +39,7 @@ const TestOne = (props) => {
 		setValue(value);
 
 		if (value == false) {
+			removeSessionStorage();
 			navigate("/testtwo", { replace: true });
 		}
 	};
@@ -47,7 +49,7 @@ const TestOne = (props) => {
 		const correctCount = selectedOption.filter((e) =>
 			correctOptions.includes(e)
 		).length;
-
+		removeSessionStorage();
 		console.log(`правильных ${correctCount}`);
 		navigate("/testtwo", { replace: true });
 	};

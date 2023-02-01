@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Time from "../components/UI/Time/Time";
 import { useTranslation } from "react-i18next";
+import { removeSessionStorage } from "../libs/helpers/removeSessionStorage";
 const TestFive = () => {
 	const { t, i18n } = useTranslation();
 
@@ -61,7 +62,7 @@ const TestFive = () => {
 
 	const buttonSubmit = (e) => {
 		e.preventDefault();
-
+		removeSessionStorage();
 		let correctCount = 0;
 
 		const values = [
@@ -100,6 +101,7 @@ const TestFive = () => {
 	const handleChange = (value) => {
 		//setValue(value);
 		if (value == false) {
+			removeSessionStorage();
 			//navigate("/testtwo", { replace: true });
 		}
 	};
