@@ -10,6 +10,9 @@ const Final = () => {
 	//const correct4 = sessionStorage.getItem("correct4");
 	const correct5 = sessionStorage.getItem("correct5");
 
+	const totalScore =
+		Number(correct1) + Number(correct2) + Number(correct3) + Number(correct5);
+
 	return (
 		<div>
 			<main className="main_final">
@@ -73,10 +76,7 @@ const Final = () => {
 							<div class="divTableCell2">{correct1}&nbsp;</div>
 							<div class="divTableCell2">{correct5}&nbsp;</div>
 							<div class="divTableCell2">
-								{Number(correct1) +
-									Number(correct2) +
-									Number(correct3) +
-									Number(correct5)}
+								{totalScore}
 								&nbsp;
 							</div>
 						</div>

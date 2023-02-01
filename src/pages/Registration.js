@@ -2,8 +2,13 @@ import React from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { gglsheet } from "../libs/gglsheet";
 
 const Registration = () => {
+	const { t, i18n } = useTranslation();
+	let navigate = useNavigate();
+	let isAuth;
+
 	const [surname, setSurname] = useState("");
 	const [name, setName] = useState("");
 	const [patronymic, setPatronymic] = useState("");
@@ -11,39 +16,16 @@ const Registration = () => {
 	const [profession, setProfession] = useState("");
 	const [course, setCourse] = useState("");
 	const [time, setTime] = useState("");
-	let navigate = useNavigate();
-	let isAuth;
-
-	const { t, i18n } = useTranslation();
 
 	React.useEffect(() => {
 		document.getElementById("noneSubmit").style.display = "none";
 		currentTime();
 	}, []);
 
-	const scriptUrl =
-		"https://script.google.com/macros/s/AKfycbywnZDRN58kTS3j18l0v6EfqfOsztt8rUP-3cS8zOpkFy_1jVOaiv6TMJfNIOK_-qbQJA/exec";
-
 	const currentTime = () => {
 		let date = new Date().toString().slice(3, 21);
 		setTime(date);
 	};
-
-	function Submit(e) {
-		const formEle = document.querySelector("form");
-		const formDatab = new FormData(formEle);
-		fetch(scriptUrl, {
-			method: "POST",
-			body: formDatab,
-		})
-			.then((res) => res.json())
-			.then((data) => {
-				console.log(data);
-			})
-			.catch((error) => {
-				console.log(error);
-			});
-	}
 
 	const buttonSubmit = (e) => {
 		e.preventDefault();
@@ -52,8 +34,7 @@ const Registration = () => {
 		let inputsValueTrue = inputs.every((input) => input.value);
 
 		if (inputsValueTrue) {
-		
-			Submit(e);
+			gglsheet(e);
 
 			sessionStorage.setItem("surname", surname);
 			sessionStorage.setItem("name", name);
@@ -67,7 +48,6 @@ const Registration = () => {
 			isAuth = true;
 			console.log(surname, name, patronymic, institution, profession, course);
 			document.getElementById("noneSubmit").style.display = "none";
-			
 		} else document.getElementById("noneSubmit").style.display = "block";
 	};
 
