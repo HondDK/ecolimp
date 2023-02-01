@@ -102,7 +102,7 @@ const TestFive = () => {
 		//setValue(value);
 		if (value == false) {
 			removeSessionStorage();
-			//navigate("/testtwo", { replace: true });
+			//navigate("/final", { replace: true });
 		}
 	};
 

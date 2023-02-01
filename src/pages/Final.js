@@ -3,12 +3,12 @@ import React from "react";
 const Final = () => {
 	return (
 		<div>
-			<main class="main__test">
-				<h1>Результаты Теста</h1>
+			<main className="main_final">
+				<header>Результаты Теста</header>
 				<div
 					class="divTable"
 					style={{
-						width: "100%",
+						width: "99%",
 						textAlign: "center",
 						border: "1px solid #fff",
 					}}
@@ -66,9 +66,6 @@ const Final = () => {
 							<div class="divTableCell2">&nbsp;</div>
 						</div>
 					</div>
-				</div>
-				<div class="wrap__btn">
-					<button class="btn__complete">Завершить задание</button>
 				</div>
 			</main>
 		</div>
