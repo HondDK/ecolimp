@@ -2,12 +2,10 @@ import React from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { gglsheet } from "../libs/gglsheet";
 
 const Registration = () => {
-	const { t, i18n } = useTranslation();
+	const { t } = useTranslation();
 	let navigate = useNavigate();
-	let isAuth;
 
 	const [surname, setSurname] = useState("");
 	const [name, setName] = useState("");
@@ -34,8 +32,6 @@ const Registration = () => {
 		let inputsValueTrue = inputs.every((input) => input.value);
 
 		if (inputsValueTrue) {
-			gglsheet(e);
-
 			sessionStorage.setItem("surname", surname);
 			sessionStorage.setItem("name", name);
 			sessionStorage.setItem("patronymic", patronymic);
@@ -45,7 +41,7 @@ const Registration = () => {
 			sessionStorage.setItem("time", time);
 
 			navigate("/testone", { replace: true });
-			isAuth = true;
+
 			console.log(surname, name, patronymic, institution, profession, course);
 			document.getElementById("noneSubmit").style.display = "none";
 		} else document.getElementById("noneSubmit").style.display = "block";
@@ -118,7 +114,6 @@ const Registration = () => {
 					>
 						{t("error")}
 					</p>
-
 					<button class="btn__submit" onClick={buttonSubmit}>
 						{t("send")}
 					</button>

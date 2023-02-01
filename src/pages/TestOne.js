@@ -4,10 +4,9 @@ import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { removeSessionStorage } from "../libs/helpers/removeSessionStorage";
 
-const TestOne = (props) => {
+const TestOne = () => {
 	let navigate = useNavigate();
 	const { t, i18n } = useTranslation();
-	i18n.changeLanguage(props.language);
 
 	const correctOptions = [1, 4, 6, 7];
 

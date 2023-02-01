@@ -7,7 +7,7 @@ import { removeSessionStorage } from "../libs/helpers/removeSessionStorage";
 const TestTwo = () => {
 	let navigate = useNavigate();
 	const correctOption = [2];
-	const { t, i18n } = useTranslation();
+	const { t } = useTranslation();
 
 	const [selectedButton, setSelectedButton] = useState(null);
 	const [value, setValue] = useState();
@@ -23,7 +23,7 @@ const TestTwo = () => {
 		e.preventDefault();
 		let correctCount = 0;
 
-		if (selectedOption == correctOption) {
+		if (selectedOption === correctOption) {
 			correctCount++;
 		}
 		removeSessionStorage();
@@ -34,7 +34,7 @@ const TestTwo = () => {
 
 	const handleChange = (value) => {
 		setValue(value);
-		if (value == false) {
+		if (value === false) {
 			navigate("/testtree", { replace: true });
 			removeSessionStorage();
 		}

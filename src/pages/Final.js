@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useTranslation } from "react-i18next";
+import { gglsheet } from "../libs/gglsheet";
 
 const Final = () => {
-	const { t, i18n } = useTranslation();
+	const { t } = useTranslation();
 
 	const correct1 = sessionStorage.getItem("correct1");
 	const correct2 = sessionStorage.getItem("correct2");
@@ -12,6 +13,13 @@ const Final = () => {
 
 	const totalScore =
 		Number(correct1) + Number(correct2) + Number(correct3) + Number(correct5);
+
+	const buttonSubmit = (e) => {
+		gglsheet(e);
+	};
+	useEffect(() => {
+		buttonSubmit();
+	}, []);
 
 	return (
 		<div>
@@ -77,6 +85,63 @@ const Final = () => {
 							<div class="divTableCell2">{correct5}&nbsp;</div>
 							<div class="divTableCell2">
 								{totalScore}
+								<form class="content" name="google-sheet">
+									<input
+										id="date"
+										name="Name"
+										style={{ display: "none" }}
+										value={sessionStorage.getItem("name")}
+									/>
+									<input
+										id="date"
+										name="Surname"
+										style={{ display: "none" }}
+										value={sessionStorage.getItem("surname")}
+									/>
+									<input
+										id="date"
+										name="Patronymic"
+										style={{ display: "none" }}
+										value={sessionStorage.getItem("patronymic")}
+									/>
+									<input
+										id="date"
+										name="Institution"
+										style={{ display: "none" }}
+										value={sessionStorage.getItem("institution")}
+									/>
+									<input
+										id="date"
+										name="Profession"
+										style={{ display: "none" }}
+										value={sessionStorage.getItem("profession")}
+									/>
+									<input
+										id="Scores"
+										name="Scores"
+										style={{ display: "none" }}
+										value={totalScore}
+									/>
+									<input
+										id="Scores"
+										name="Course"
+										style={{ display: "none" }}
+										value={sessionStorage.getItem("course")}
+									/>
+									<input
+										id="date"
+										name="Date"
+										style={{ display: "none" }}
+										value={sessionStorage.getItem("time")}
+									/>
+									<button
+										style={{ display: "none" }}
+										class="btn__submit"
+										onClick={buttonSubmit}
+									>
+										{t("send")}
+									</button>
+								</form>
 								&nbsp;
 							</div>
 						</div>
