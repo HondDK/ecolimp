@@ -53,6 +53,7 @@ function App() {
 	function handleCopy(e) {
 		e.preventDefault();
 		setShowModal(e);
+		navigator.clipboard.writeText("не получается да?");
 	}
 
 	return (
