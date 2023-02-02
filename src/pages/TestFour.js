@@ -17,14 +17,15 @@ const TestFour = () => {
 	};
 
 	const buttonSubmit = (e) => {
-		let correctCount = 0;
 		e.preventDefault();
+		let correctCount = 0;
+
 		removeSessionStorage();
 		card.map((c) => {
 			if (c.id === c.order) {
 				correctCount++;
 				console.log(correctCount);
-				sessionStorage("correct", correctCount);
+				sessionStorage.setItem("correct4", correctCount);
 			}
 		});
 		navigate("/testfive", { replace: true });

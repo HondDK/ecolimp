@@ -127,7 +127,7 @@ const Final = () => {
 										value={totalScore}
 									/>
 									<input
-										id="Scores"
+										id="Course"
 										name="Course"
 										style={{ display: "none" }}
 										value={sessionStorage.getItem("course")}
