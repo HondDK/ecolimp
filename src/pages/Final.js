@@ -8,11 +8,15 @@ const Final = () => {
 	const correct1 = sessionStorage.getItem("correct1");
 	const correct2 = sessionStorage.getItem("correct2");
 	const correct3 = sessionStorage.getItem("correct3");
-	//const correct4 = sessionStorage.getItem("correct4");
+	const correct4 = sessionStorage.getItem("correct4");
 	const correct5 = sessionStorage.getItem("correct5");
 
 	const totalScore =
-		Number(correct1) + Number(correct2) + Number(correct3) + Number(correct5);
+		Number(correct1) +
+		Number(correct2) +
+		Number(correct3) +
+		Number(correct4) +
+		Number(correct5);
 
 	const buttonSubmit = (e) => {
 		gglsheet(e);
@@ -81,7 +85,7 @@ const Final = () => {
 							<div class="divTableCell2">{correct1}&nbsp;</div>
 							<div class="divTableCell2">{correct2}&nbsp;</div>
 							<div class="divTableCell2">{correct3}&nbsp;</div>
-							<div class="divTableCell2">{correct1}&nbsp;</div>
+							<div class="divTableCell2">{correct4}&nbsp;</div>
 							<div class="divTableCell2">{correct5}&nbsp;</div>
 							<div class="divTableCell2">
 								{totalScore}
