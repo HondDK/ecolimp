@@ -39,7 +39,7 @@ const TestThree = () => {
 		}
 		removeSessionStorage();
 		sessionStorage.setItem("correct3", correctCount);
-		console.log(correctCount);
+
 		navigate("/testfour", { replace: true });
 	};
 

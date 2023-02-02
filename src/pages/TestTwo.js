@@ -6,24 +6,22 @@ import { removeSessionStorage } from "../libs/helpers/removeSessionStorage";
 
 const TestTwo = () => {
 	let navigate = useNavigate();
-	const correctOption = [2];
+
 	const { t } = useTranslation();
 
 	const [selectedButton, setSelectedButton] = useState(null);
 	const [value, setValue] = useState();
 	const [min, setMin] = useState(0);
-	const [selectedOption, setSelectedOption] = useState("");
 
 	const handleButtonClick = (button) => {
 		setSelectedButton(button);
-		setSelectedOption(button);
 	};
 
 	const buttonSubmit = (e) => {
 		e.preventDefault();
 		let correctCount = 0;
 
-		if (selectedOption === correctOption) {
+		if (selectedButton === 2) {
 			correctCount++;
 		}
 		removeSessionStorage();

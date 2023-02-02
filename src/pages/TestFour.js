@@ -24,7 +24,6 @@ const TestFour = () => {
 		card.map((c) => {
 			if (c.id === c.order) {
 				correctCount++;
-				console.log(correctCount);
 				sessionStorage.setItem("correct4", correctCount);
 			}
 		});
