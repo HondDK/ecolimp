@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import Language from "./pages/Language";
 import TestOne from "./pages/TestOne";
 import TestTwo from "./pages/TestTwo";
@@ -46,15 +47,30 @@ const router = createBrowserRouter([
 	},
 ]);
 
-function handleCopy(e) {
-	e.preventDefault();
-	alert("Текст нельзя копировать!");
-}
-
 function App() {
+	const [showModal, setShowModal] = useState(false);
+
+	function handleCopy(e) {
+		e.preventDefault();
+		setShowModal(e);
+	}
+
 	return (
-		<div className="App">
-			<RouterProvider router={router} onCopy={handleCopy} />
+		<div className="App" onCopy={handleCopy}>
+			{showModal && (
+				<div className="modal">
+					<header
+						style={{
+							fontSize: "25px",
+							color: "red",
+						}}
+					>
+						Текст нельзя копировать!
+					</header>
+				</div>
+			)}
+
+			<RouterProvider router={router} />
 		</div>
 	);
 }
