@@ -7,7 +7,7 @@ import { removeSessionStorage } from "../libs/helpers/removeSessionStorage";
 const TestThree = () => {
 	let navigate = useNavigate();
 	const correctValues = [1, 2, 4, 6, 3, 5, 7];
-	const { t, i18n } = useTranslation();
+	const { t } = useTranslation();
 
 	const [value, setValue] = useState();
 	const [min, setMin] = useState(9);

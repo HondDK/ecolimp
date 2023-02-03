@@ -2,11 +2,12 @@ import React, { useState } from "react";
 import Time from "../components/UI/Time/Time";
 import { useNavigate } from "react-router-dom";
 import { removeSessionStorage } from "../libs/helpers/removeSessionStorage";
+import { useTranslation } from "react-i18next";
 
 const TestFour = () => {
 	const [value, setValue] = useState();
 	const [min, setMin] = useState(11);
-
+	const { t } = useTranslation();
 	let navigate = useNavigate();
 	const handleChange = (value) => {
 		setValue(value);
@@ -34,62 +35,62 @@ const TestFour = () => {
 		{
 			id: 1,
 			order: 6,
-			text: "Количество товара, которое покупатели хотят и могут приобрести при данном уровне цены",
+			text: t("task4-answer1"),
 		},
 		{
 			id: 2,
 			order: 2,
-			text: "График (или шкала), показывающий, сколько единиц товара покупатели хотят и могут купить во всем диапазоне цен в данный момент времени",
+			text: t("task4-answer2"),
 		},
 		{
 			id: 3,
 			order: 10,
-			text: "Закон, в соответствии с которым величина спроса на товар находится в обратной зависимости от цены этого товара",
+			text: t("task4-answer3"),
 		},
 		{
 			id: 4,
 			order: 7,
-			text: "Явление, которое возникает, когда вследствие снижения цены товара происходит относительное увеличение дохода покупателя, позволяющее последнему приобрести большее количество товара",
+			text: t("task4-answer4"),
 		},
 		{
 			id: 5,
 			order: 12,
-			text: "Явление, которое возникает, когда покупатель отдает предпочтение более дешевому товару, вытесняющему при выборе покупки товар, ставший относительно дороже",
+			text: t("task4-answer5"),
 		},
 		{
 			id: 6,
 			order: 9,
-			text: "с ростом потребления блага (при неизменном объёме потребления всех остальных благ) общая полезность, получаемая потребителем, возрастает, но скорость роста замедляется",
+			text: t("task4-answer6"),
 		},
 		{
 			id: 7,
 			order: 11,
-			text: "Явление, состоящее в том, что повышение цены товара ведет к росту объема спроса на него",
+			text: t("task4-answer7"),
 		},
 		{
 			id: 8,
 			order: 3,
-			text: "Факторы, вызывающие изменение спроса и сдвиг кривой спроса",
+			text: t("task4-answer8"),
 		},
 		{
 			id: 9,
 			order: 5,
-			text: "Товары, спрос на которые падает по мере роста доходов потребителей",
+			text: t("task4-answer9"),
 		},
 		{
 			id: 10,
 			order: 8,
-			text: "Товары, спрос на которые растет по мере увеличения доходов покупателей",
+			text: t("task4-answer10"),
 		},
 		{
 			id: 11,
 			order: 4,
-			text: "Товары, которые могут быть использованы вместо других товаров с аналогичными свойствами",
+			text: t("task4-answer11"),
 		},
 		{
 			id: 12,
 			order: 1,
-			text: "Товары, которые потребляются совместно; при этом один без другого, как правило, не может быть использован к потреблению",
+			text: t("task4-answer12"),
 		},
 	]);
 
@@ -132,7 +133,7 @@ const TestFour = () => {
 		<div>
 			<body class="test">
 				<header>
-					<h1>{t("work4content")}</h1>
+					<h1>Практическое задание №4</h1>
 					<p>
 						<Time min={min} onChange={handleChange} />
 					</p>
@@ -162,7 +163,7 @@ const TestFour = () => {
 												draggable={true}
 												key={set.id}
 											>
-												{set.text}
+												{t(set.text)}
 											</div>
 										))}
 								</div>
@@ -170,7 +171,7 @@ const TestFour = () => {
 							<div class="divTableRow">
 								<div class="divTableCell">
 									<span style={{ fontWeight: "400" }}>
-										{t("task4-question2")}
+										{t("task4-question2")}спроса
 									</span>
 								</div>
 								<div class="divTableCell">
@@ -188,7 +189,7 @@ const TestFour = () => {
 												draggable={true}
 												key={set.id}
 											>
-												{set.text}
+												{t(set.text)}
 											</div>
 										))}
 								</div>
@@ -214,7 +215,7 @@ const TestFour = () => {
 												draggable={true}
 												key={set.id}
 											>
-												{set.text}
+												{t(set.text)}
 											</div>
 										))}
 								</div>
@@ -240,7 +241,7 @@ const TestFour = () => {
 												draggable={true}
 												key={set.id}
 											>
-												{set.text}
+												{t(set.text)}
 											</div>
 										))}
 								</div>
@@ -266,7 +267,7 @@ const TestFour = () => {
 												draggable={true}
 												key={set.id}
 											>
-												{set.text}
+												{t(set.text)}
 											</div>
 										))}
 								</div>
@@ -292,7 +293,7 @@ const TestFour = () => {
 												draggable={true}
 												key={set.id}
 											>
-												{set.text}
+												{t(set.text)}
 											</div>
 										))}
 								</div>
@@ -318,7 +319,7 @@ const TestFour = () => {
 												draggable={true}
 												key={set.id}
 											>
-												{set.text}
+												{t(set.text)}
 											</div>
 										))}
 								</div>
@@ -344,7 +345,7 @@ const TestFour = () => {
 												draggable={true}
 												key={set.id}
 											>
-												{set.text}
+												{t(set.text)}
 											</div>
 										))}
 								</div>
@@ -370,7 +371,7 @@ const TestFour = () => {
 												draggable={true}
 												key={set.id}
 											>
-												{set.text}
+												{t(set.text)}
 											</div>
 										))}
 									&nbsp;
@@ -397,7 +398,7 @@ const TestFour = () => {
 												draggable={true}
 												key={set.id}
 											>
-												{set.text}
+												{t(set.text)}
 											</div>
 										))}
 								</div>
@@ -423,7 +424,7 @@ const TestFour = () => {
 												draggable={true}
 												key={set.id}
 											>
-												{set.text}
+												{t(set.text)}
 											</div>
 										))}
 								</div>
@@ -459,7 +460,7 @@ const TestFour = () => {
 				</main>
 				<div class="wrap__btn">
 					<button className="btn__close-task" onClick={buttonSubmit}>
-						Завершить задание
+						{t("closeTask")}
 					</button>
 				</div>
 			</body>
