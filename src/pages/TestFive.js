@@ -63,50 +63,53 @@ const TestFive = () => {
 		"15",
 		"mc>mr",
 	];
+	const values = [
+		value1,
+		value2,
+		value3,
+		value4,
+		value5,
+		value6,
+		value7,
+		value8,
+		value9,
+		value10,
+		value11,
+		value12,
+		value13,
+		value14,
+		value15,
+		value16,
+		value17,
+		value18,
+		value19,
+		value20,
+		value21,
+		value22,
+		value23,
+		value24,
+	];
 
-	const buttonSubmit = (e) => {
-		e.preventDefault();
-		removeSessionStorage();
+	const checkCorrectCount = () => {
 		let correctCount = 0;
-
-		const values = [
-			value1,
-			value2,
-			value3,
-			value4,
-			value5,
-			value6,
-			value7,
-			value8,
-			value9,
-			value10,
-			value11,
-			value12,
-			value13,
-			value14,
-			value15,
-			value16,
-			value17,
-			value18,
-			value19,
-			value20,
-			value21,
-			value22,
-			value23,
-			value24,
-		];
-
 		for (let i = 0; i < values.length; i++) {
 			if (values[i].toLowerCase() === correctValues[i]) correctCount++;
 		}
 		sessionStorage.setItem("correct5", correctCount);
+	};
+
+	const buttonSubmit = (e) => {
+		e.preventDefault();
+		removeSessionStorage();
+
+		checkCorrectCount();
 		navigate("/final", { replace: true });
-		console.log(correctCount);
 	};
 
 	const handleChange = (value) => {
 		setValue(value);
 		if (value == false) {
+			checkCorrectCount();
 			removeSessionStorage();
 			navigate("/final", { replace: true });
 		}

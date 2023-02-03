@@ -17,24 +17,27 @@ const TestTwo = () => {
 		setSelectedButton(button);
 	};
 
-	const buttonSubmit = (e) => {
-		e.preventDefault();
+	const checkCorrectCount = () => {
 		let correctCount = 0;
-
 		if (selectedButton === 2) {
 			correctCount++;
 		}
-		removeSessionStorage();
 		sessionStorage.setItem("correct2", correctCount);
-		console.log(`правильных ${correctCount}`);
+	};
+
+	const buttonSubmit = (e) => {
+		e.preventDefault();
+		checkCorrectCount(e);
+		removeSessionStorage();
 		navigate("/testtree", { replace: true });
 	};
 
 	const handleChange = (value) => {
 		setValue(value);
 		if (value === false) {
-			navigate("/testtree", { replace: true });
+			checkCorrectCount(value);
 			removeSessionStorage();
+			navigate("/testtree", { replace: true });
 		}
 	};
 

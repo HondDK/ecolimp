@@ -9,26 +9,32 @@ const TestFour = () => {
 	const [min, setMin] = useState(11);
 	const { t } = useTranslation();
 	let navigate = useNavigate();
+
 	const handleChange = (value) => {
 		setValue(value);
 		if (value == false) {
-			navigate("/testfive", { replace: true });
+			checkCorrectCount();
 			removeSessionStorage();
+			navigate("/testfive", { replace: true });
 		}
 	};
 
 	const buttonSubmit = (e) => {
 		e.preventDefault();
-		let correctCount = 0;
 
 		removeSessionStorage();
+		checkCorrectCount();
+		navigate("/testfive", { replace: true });
+	};
+
+	const checkCorrectCount = () => {
+		let correctCount = 0;
 		card.map((c) => {
 			if (c.id === c.order) {
 				correctCount++;
 				sessionStorage.setItem("correct4", correctCount);
 			}
 		});
-		navigate("/testfive", { replace: true });
 	};
 
 	const [card, setCard] = useState([
@@ -139,7 +145,15 @@ const TestFour = () => {
 					</p>
 				</header>
 
-				<main class="main__test">
+				<main
+					class="main__test"
+					style={{
+						msUserSelect: "none",
+						mozUserSelect: "none",
+						webkitUserSelect: "none",
+						UserSelect: "none",
+					}}
+				>
 					<div class="text">{t("task4")}</div>
 					<div
 						class="divTable"

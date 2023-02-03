@@ -38,19 +38,24 @@ const TestOne = () => {
 		setValue(value);
 
 		if (value == false) {
-			navigate("/testtwo", { replace: true });
+			checkCorrectCount(value);
 			removeSessionStorage();
+			navigate("/testtwo", { replace: true });
 		}
+	};
+
+	const checkCorrectCount = (e) => {
+		const correctCount = selectedOption.filter((e) =>
+			correctOptions.includes(e)
+		).length;
+		sessionStorage.setItem("correct1", correctCount);
 	};
 
 	const buttonSubmit = (e) => {
 		e.preventDefault();
-		const correctCount = selectedOption.filter((e) =>
-			correctOptions.includes(e)
-		).length;
+		checkCorrectCount(e);
 		removeSessionStorage();
-		sessionStorage.setItem("correct1", correctCount);
-		console.log(`правильных ${correctCount}`);
+
 		navigate("/testtwo", { replace: true });
 	};
 

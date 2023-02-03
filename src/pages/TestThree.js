@@ -23,23 +23,24 @@ const TestThree = () => {
 	const handleChange = (value) => {
 		setValue(value);
 		if (value == false) {
-			navigate("/testfour", { replace: true });
+			checkCorrectCount();
 			removeSessionStorage();
+			navigate("/testfour", { replace: true });
 		}
 	};
-
-	const buttonSubmit = (e) => {
-		e.preventDefault();
-
+	const checkCorrectCount = () => {
 		let correctCount = 0;
 		const values = [value1, value2, value3, value4, value5, value6, value7];
 
 		for (let i = 0; i < values.length; i++) {
 			if (parseInt(values[i]) === correctValues[i]) correctCount++;
 		}
-		removeSessionStorage();
 		sessionStorage.setItem("correct3", correctCount);
-
+	};
+	const buttonSubmit = (e) => {
+		e.preventDefault();
+		checkCorrectCount();
+		removeSessionStorage();
 		navigate("/testfour", { replace: true });
 	};
 
