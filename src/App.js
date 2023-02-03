@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Language from "./pages/Language";
 import TestOne from "./pages/TestOne";
 import TestTwo from "./pages/TestTwo";
@@ -56,8 +56,22 @@ function App() {
 		navigator.clipboard.writeText("не получается да?");
 	}
 
+	const [isVisible, setIsVisible] = useState(true);
+
+	useEffect(() => {
+		const handleVisibilityChange = () => {
+			setIsVisible(document.visibilityState === "visible");
+		};
+
+		document.addEventListener("visibilitychange", handleVisibilityChange);
+
+		return () => {
+			document.removeEventListener("visibilitychange", handleVisibilityChange);
+		};
+	}, []);
 	return (
 		<div className="App" onCopy={handleCopy}>
+			
 			{showModal && (
 				<div className="modal">
 					<header
