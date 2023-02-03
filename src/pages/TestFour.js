@@ -132,20 +132,21 @@ const TestFour = () => {
 		<div>
 			<body class="test">
 				<header>
-					<h1>Практическое задание №4</h1>
+					<h1>{t("work4content")}</h1>
 					<p>
 						<Time min={min} onChange={handleChange} />
 					</p>
 				</header>
 
 				<main class="main__test">
+					<div class="text">{t("task4")}</div>
 					<div
 						class="divTable"
 						style={{ width: "100%", border: "1px solid #000", height: "600px" }}
 					>
 						<div class="divTableBody">
 							<div class="divTableRow">
-								<div class="divTableCell">Cпрос</div>
+								<div class="divTableCell">{t("task4-question1")}</div>
 								<div class="divTableCell">
 									{card
 										.sort(sortCard)
@@ -168,7 +169,9 @@ const TestFour = () => {
 							</div>
 							<div class="divTableRow">
 								<div class="divTableCell">
-									<span style={{ fontWeight: "400" }}>Величина спроса</span>
+									<span style={{ fontWeight: "400" }}>
+										{t("task4-question2")}
+									</span>
 								</div>
 								<div class="divTableCell">
 									{card
@@ -192,7 +195,9 @@ const TestFour = () => {
 							</div>
 							<div class="divTableRow">
 								<div class="divTableCell">
-									<span style={{ fontWeight: "400" }}>Закон спроса</span>
+									<span style={{ fontWeight: "400" }}>
+										{t("task4-question3")}
+									</span>
 								</div>
 								<div class="divTableCell">
 									{card
@@ -216,7 +221,9 @@ const TestFour = () => {
 							</div>
 							<div class="divTableRow">
 								<div class="divTableCell">
-									<span style={{ fontWeight: "400" }}>Эффект дохода</span>
+									<span style={{ fontWeight: "400" }}>
+										{t("task4-question4")}
+									</span>
 								</div>
 								<div class="divTableCell">
 									{card
@@ -240,7 +247,9 @@ const TestFour = () => {
 							</div>
 							<div class="divTableRow">
 								<div class="divTableCell">
-									<span style={{ fontWeight: "400" }}>Эффект замещения</span>
+									<span style={{ fontWeight: "400" }}>
+										{t("task4-question5")}
+									</span>
 								</div>
 								<div class="divTableCell">
 									{card
@@ -265,7 +274,7 @@ const TestFour = () => {
 							<div class="divTableRow">
 								<div class="divTableCell">
 									<span style={{ fontWeight: "400" }}>
-										Принцип убывания маржинальной полезности
+										{t("task4-question6")}
 									</span>
 								</div>
 								<div class="divTableCell">
@@ -290,7 +299,9 @@ const TestFour = () => {
 							</div>
 							<div class="divTableRow">
 								<div class="divTableCell">
-									<span style={{ fontWeight: "400" }}>Эффект Гиффена</span>
+									<span style={{ fontWeight: "400" }}>
+										{t("task4-question7")}
+									</span>
 								</div>
 								<div class="divTableCell">
 									{card
@@ -314,7 +325,9 @@ const TestFour = () => {
 							</div>
 							<div class="divTableRow">
 								<div class="divTableCell">
-									<span style={{ fontWeight: "400" }}>Детерминанты спроса</span>
+									<span style={{ fontWeight: "400" }}>
+										{t("task4-question8")}
+									</span>
 								</div>
 								<div class="divTableCell">
 									{card
@@ -338,7 +351,9 @@ const TestFour = () => {
 							</div>
 							<div class="divTableRow">
 								<div class="divTableCell">
-									<span style={{ fontWeight: "400" }}>Низшие товары</span>
+									<span style={{ fontWeight: "400" }}>
+										{t("task4-question9")}
+									</span>
 								</div>
 								<div class="divTableCell">
 									{card
@@ -363,7 +378,9 @@ const TestFour = () => {
 							</div>
 							<div class="divTableRow">
 								<div class="divTableCell">
-									<span style={{ fontWeight: "400" }}>Нормальные товары</span>
+									<span style={{ fontWeight: "400" }}>
+										{t("task4-question10")}
+									</span>
 								</div>
 								<div class="divTableCell">
 									{card
@@ -387,7 +404,9 @@ const TestFour = () => {
 							</div>
 							<div class="divTableRow">
 								<div class="divTableCell">
-									<span style={{ fontWeight: "400" }}>Товары-субституты</span>
+									<span style={{ fontWeight: "400" }}>
+										{t("task4-question11")}
+									</span>
 								</div>
 								<div class="divTableCell">
 									{card
@@ -411,7 +430,9 @@ const TestFour = () => {
 							</div>
 							<div class="divTableRow">
 								<div class="divTableCell">
-									<span style={{ fontWeight: "400" }}>Товары-комплементы</span>
+									<span style={{ fontWeight: "400" }}>
+										{t("task4-question12")}
+									</span>
 								</div>
 								<div class="divTableCell">
 									{card

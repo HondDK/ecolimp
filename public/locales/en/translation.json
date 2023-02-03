@@ -1,7 +1,5 @@
 {
-
-	"header":"Olympiad on the basics of economics",
-
+	"header": "Olympiad on the basics of economics",
 
 	"surname": "Surname",
 	"name": "Name",
@@ -41,6 +39,21 @@
 	"task3-question7": "The rapid economic progress of society is a consequence of high rates of labor productivity growth and dynamic expansion of the product range",
 	"task3-question8": "Subsistence production",
 	"task3-question9": "Commercial production",
+
+	"work4content": "Practical task №4",
+	"task4": "For each of the concepts and terms given here, choose the appropriate definition for it:",
+	"task4-question1": "Demand",
+	"task4-question2": "Quantity of demand",
+	"task4-question3": "Law of demand",
+	"task4-question4": "Income effect",
+	"task4-question5": "Substitution",
+	"task4-question6": "Principle of decreasing marginal utility",
+	"task4-question7": "Giffen effect",
+	"task4-question8": "Determinants of demand",
+	"task4-question9": "Inferior goods",
+	"task4-question10": "Normal goods",
+	"task4-question11": "Substitute products",
+	"task4-question12": "Complementary products",
 
 	"work5content": "Practical task №5",
 	"task5": "The table provides information about the costs and sales level of the company. Calculate the marginal costs of the company, total and marginal income. Determine at what values of price and sales volume the company will receive the maximum profit.",
