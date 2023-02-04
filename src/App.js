@@ -10,6 +10,7 @@ import ErrorPage from "./pages/ErrorPage";
 import Final from "./pages/Final";
 import "./style/style.scss";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { useCheckVisible } from "./libs/helpers/useCheckVisible";
 
 const router = createBrowserRouter([
 	{
@@ -56,22 +57,9 @@ function App() {
 		navigator.clipboard.writeText("не получается да?");
 	}
 
-	const [isVisible, setIsVisible] = useState(true);
-
-	useEffect(() => {
-		const handleVisibilityChange = () => {
-			setIsVisible(document.visibilityState === "visible");
-		};
-
-		document.addEventListener("visibilitychange", handleVisibilityChange);
-
-		return () => {
-			document.removeEventListener("visibilitychange", handleVisibilityChange);
-		};
-	}, []);
+	
 	return (
 		<div className="App" onCopy={handleCopy}>
-			
 			{showModal && (
 				<div className="modal">
 					<header

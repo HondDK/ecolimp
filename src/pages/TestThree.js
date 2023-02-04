@@ -3,7 +3,7 @@ import Time from "../components/UI/Time/Time";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { removeSessionStorage } from "../libs/helpers/removeSessionStorage";
-
+import { useCheckVisible } from "../libs/helpers/useCheckVisible";
 const TestThree = () => {
 	let navigate = useNavigate();
 	const correctValues = [1, 2, 4, 6, 3, 5, 7];
@@ -43,6 +43,13 @@ const TestThree = () => {
 		removeSessionStorage();
 		navigate("/testfour", { replace: true });
 	};
+	const isVisible = useCheckVisible();
+	console.log(isVisible);
+
+	if (isVisible === false) {
+		removeSessionStorage();
+		navigate("/testfour", { replace: true });
+	}
 
 	return (
 		<div>

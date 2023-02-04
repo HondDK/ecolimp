@@ -3,7 +3,7 @@ import Time from "../components/UI/Time/Time";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 import { removeSessionStorage } from "../libs/helpers/removeSessionStorage";
-
+import { useCheckVisible } from "../libs/helpers/useCheckVisible";
 const TestFive = () => {
 	let navigate = useNavigate();
 
@@ -114,6 +114,14 @@ const TestFive = () => {
 			navigate("/final", { replace: true });
 		}
 	};
+
+	const isVisible = useCheckVisible();
+	console.log(isVisible);
+
+	if (isVisible === false) {
+		removeSessionStorage();
+		navigate("/final", { replace: true });
+	}
 
 	return (
 		<body class="test">

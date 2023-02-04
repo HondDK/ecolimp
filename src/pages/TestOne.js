@@ -3,6 +3,7 @@ import Time from "../components/UI/Time/Time";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { removeSessionStorage } from "../libs/helpers/removeSessionStorage";
+import { useCheckVisible } from "../libs/helpers/useCheckVisible";
 
 const TestOne = () => {
 	let navigate = useNavigate();
@@ -15,6 +16,7 @@ const TestOne = () => {
 	const [selectedOption, setSelectedOption] = useState("");
 	const [correctCount, setСorrectCount] = useState(0);
 	const [selectedButtons, setSelectedButtons] = useState([]);
+	
 
 	const handleButtonClick = (button) => {
 		setSelectedOption((prevOptions) => {
@@ -37,7 +39,7 @@ const TestOne = () => {
 	const handleChange = (value) => {
 		setValue(value);
 
-		if (value == false) {
+		if (value === false ) {
 			checkCorrectCount(value);
 			removeSessionStorage();
 			navigate("/testtwo", { replace: true });
@@ -58,6 +60,13 @@ const TestOne = () => {
 
 		navigate("/testtwo", { replace: true });
 	};
+
+	const isVisible = useCheckVisible();
+	console.log(isVisible);
+	if (isVisible === false) {
+		removeSessionStorage();
+		navigate("/testtwo", { replace: true });
+	}
 
 	return (
 		<div>
