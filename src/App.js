@@ -11,6 +11,7 @@ import Final from "./pages/Final";
 import "./style/style.scss";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { useCheckVisible } from "./libs/helpers/useCheckVisible";
+import Warning from "./pages/Warning";
 
 const router = createBrowserRouter([
 	{
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
 	{
 		path: "/reg",
 		element: <Registration></Registration>,
+	},
+	{
+		path:"/warning",
+		element: <Warning></Warning>
 	},
 	{
 		path: "/testone",
@@ -54,10 +59,9 @@ function App() {
 	function handleCopy(e) {
 		e.preventDefault();
 		setShowModal(e);
-		navigator.clipboard.writeText("не получается да?");
+		navigator.clipboard.writeText("...");
 	}
 
-	
 	return (
 		<div className="App" onCopy={handleCopy}>
 			{showModal && (

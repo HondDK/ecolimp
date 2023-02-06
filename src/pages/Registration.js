@@ -40,7 +40,7 @@ const Registration = () => {
 			sessionStorage.setItem("course", course);
 			sessionStorage.setItem("time", time);
 
-			navigate("/testone", { replace: true });
+			navigate("/warning", { replace: true });
 
 			console.log(surname, name, patronymic, institution, profession, course);
 			document.getElementById("noneSubmit").style.display = "none";

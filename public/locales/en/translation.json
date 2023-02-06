@@ -10,6 +10,8 @@
 
 	"send": "Send",
 	"error": "Fill in all the fields",
+	"warning": "Warning",
+	"modal": "When passing the test, it is forbidden to switch tabs, minimize the browser. If these conditions are violated, the current task is canceled.",
 
 	"work1content": "Practical task №1",
 	"task": "Define a positive and normative statement:",
@@ -41,7 +43,7 @@
 	"task3-question9": "Commercial production",
 
 	"work4content": "Practical task №4",
-	"task4": "For each of the concepts and terms given here, choose the appropriate definition for it:",
+	"task4": "For each of the concepts and terms given here, choose the appropriate definition for it: (Swap definitions with the mouse)",
 	"task4-question1": "Demand",
 	"task4-question2": "Quantity of demand",
 	"task4-question3": "Law of demand",
