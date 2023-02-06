@@ -9,7 +9,7 @@ const Language = () => {
 		i18next.changeLanguage(e);
 		sessionStorage.clear();
 		sessionStorage.setItem("lang", e);
-		navigate("/ecolimp/reg", { replace: true });
+		navigate("/ecolimp/reg");
 	};
 	return (
 		<div>
