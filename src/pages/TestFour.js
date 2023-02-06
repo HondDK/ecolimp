@@ -193,7 +193,7 @@ const TestFour = () => {
 							<div class="divTableRow">
 								<div class="divTableCell">
 									<span style={{ fontWeight: "400" }}>
-										{t("task4-question2")}спроса
+										{t("task4-question2")}
 									</span>
 								</div>
 								<div class="divTableCell">
