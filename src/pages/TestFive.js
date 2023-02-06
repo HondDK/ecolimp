@@ -103,7 +103,7 @@ const TestFive = () => {
 		removeSessionStorage();
 
 		checkCorrectCount();
-		navigate("/final", { replace: true });
+		navigate("/ecolimp/final", { replace: true });
 	};
 
 	const handleChange = (value) => {
@@ -111,7 +111,7 @@ const TestFive = () => {
 		if (value == false) {
 			checkCorrectCount();
 			removeSessionStorage();
-			navigate("/final", { replace: true });
+			navigate("/ecolimp/final", { replace: true });
 		}
 	};
 
@@ -120,7 +120,7 @@ const TestFive = () => {
 
 	if (isVisible === false) {
 		removeSessionStorage();
-		navigate("/final", { replace: true });
+		navigate("/ecolimp/final", { replace: true });
 	}
 
 	return (

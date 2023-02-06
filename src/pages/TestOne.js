@@ -42,7 +42,7 @@ const TestOne = () => {
 		if (value === false ) {
 			checkCorrectCount(value);
 			removeSessionStorage();
-			navigate("/testtwo", { replace: true });
+			navigate("/ecolimp/testtwo", { replace: true });
 		}
 	};
 
@@ -58,14 +58,14 @@ const TestOne = () => {
 		checkCorrectCount(e);
 		removeSessionStorage();
 
-		navigate("/testtwo", { replace: true });
+		navigate("/ecolimp/testtwo", { replace: true });
 	};
 
 	const isVisible = useCheckVisible();
-	console.log(isVisible);
+	//console.log(isVisible);
 	if (isVisible === false) {
 		removeSessionStorage();
-		navigate("/testtwo", { replace: true });
+		navigate("/ecolimp/testtwo", { replace: true });
 	}
 
 	return (

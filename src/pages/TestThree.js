@@ -25,7 +25,7 @@ const TestThree = () => {
 		if (value == false) {
 			checkCorrectCount();
 			removeSessionStorage();
-			navigate("/testfour", { replace: true });
+			navigate("/ecolimp/testfour", { replace: true });
 		}
 	};
 	const checkCorrectCount = () => {
@@ -41,14 +41,14 @@ const TestThree = () => {
 		e.preventDefault();
 		checkCorrectCount();
 		removeSessionStorage();
-		navigate("/testfour", { replace: true });
+		navigate("/ecolimp/testfour", { replace: true });
 	};
 	const isVisible = useCheckVisible();
 	console.log(isVisible);
 
 	if (isVisible === false) {
 		removeSessionStorage();
-		navigate("/testfour", { replace: true });
+		navigate("/ecolimp/testfour", { replace: true });
 	}
 
 	return (

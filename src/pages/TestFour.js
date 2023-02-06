@@ -15,7 +15,7 @@ const TestFour = () => {
 		if (value == false) {
 			checkCorrectCount();
 			removeSessionStorage();
-			navigate("/testfive", { replace: true });
+			navigate("/ecolimp/testfive", { replace: true });
 		}
 	};
 
@@ -24,7 +24,7 @@ const TestFour = () => {
 
 		removeSessionStorage();
 		checkCorrectCount();
-		navigate("/testfive", { replace: true });
+		navigate("/ecolimp/testfive", { replace: true });
 	};
 
 	const checkCorrectCount = () => {
@@ -140,7 +140,7 @@ const TestFour = () => {
 
 	if (isVisible === false) {
 		removeSessionStorage();
-		navigate("/testfive", { replace: true });
+		navigate("/ecolimp/testfive", { replace: true });
 	}
 
 	return (

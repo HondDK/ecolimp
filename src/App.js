@@ -10,45 +10,44 @@ import ErrorPage from "./pages/ErrorPage";
 import Final from "./pages/Final";
 import "./style/style.scss";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { useCheckVisible } from "./libs/helpers/useCheckVisible";
 import Warning from "./pages/Warning";
 
 const router = createBrowserRouter([
 	{
-		path: "/",
+		path: "/ecolimp/",
 		element: <Language></Language>,
 		errorElement: <ErrorPage />,
 	},
 	{
-		path: "/reg",
+		path: "/ecolimp/reg",
 		element: <Registration></Registration>,
 	},
 	{
-		path:"/warning",
-		element: <Warning></Warning>
+		path: "/ecolimp/warning",
+		element: <Warning></Warning>,
 	},
 	{
-		path: "/testone",
+		path: "/ecolimp/testone",
 		element: <TestOne></TestOne>,
 	},
 	{
-		path: "/testtwo",
+		path: "/ecolimp/testtwo",
 		element: <TestTwo></TestTwo>,
 	},
 	{
-		path: "/testtree",
+		path: "/ecolimp/testtree",
 		element: <TestTree></TestTree>,
 	},
 	{
-		path: "/testfour",
+		path: "/ecolimp/testfour",
 		element: <TestFour></TestFour>,
 	},
 	{
-		path: "/testfive",
+		path: "/ecolimp/testfive",
 		element: <TestFive></TestFive>,
 	},
 	{
-		path: "/final",
+		path: "/ecolimp/final",
 		element: <Final></Final>,
 	},
 ]);

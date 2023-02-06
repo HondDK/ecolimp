@@ -6,7 +6,7 @@ const Warning = () => {
 	const { t } = useTranslation();
 
 	const buttonSubmit = () => {
-		navigate("/testone", { replace: true });
+		navigate("/ecolimp/testone", { replace: true });
 	};
 
 	return (

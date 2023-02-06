@@ -29,7 +29,7 @@ const TestTwo = () => {
 		e.preventDefault();
 		checkCorrectCount(e);
 		removeSessionStorage();
-		navigate("/testtree", { replace: true });
+		navigate("/ecolimp/testtree", { replace: true });
 	};
 
 	const isVisible = useCheckVisible();
@@ -37,7 +37,7 @@ const TestTwo = () => {
 
 	if (isVisible === false) {
 		removeSessionStorage();
-		navigate("/testtree", { replace: true });
+		navigate("/ecolimp/testtree", { replace: true });
 	}
 
 	const handleChange = (value) => {
@@ -46,7 +46,7 @@ const TestTwo = () => {
 		if (value === false) {
 			checkCorrectCount(value);
 			removeSessionStorage();
-			navigate("/testtree", { replace: true });
+			navigate("/ecolimp/testtree", { replace: true });
 		}
 	};
 	return (

@@ -1,16 +1,15 @@
+import i18next from "i18next";
 import React from "react";
-import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 
 const Language = () => {
-	const { i18n } = useTranslation();
 	let navigate = useNavigate();
 
 	const buttonSubmit = (e) => {
-		i18n.changeLanguage(e);
+		i18next.changeLanguage(e);
 		sessionStorage.clear();
 		sessionStorage.setItem("lang", e);
-		navigate("/reg", { replace: true });
+		navigate("/ecolimp/reg", { replace: true });
 	};
 	return (
 		<div>
