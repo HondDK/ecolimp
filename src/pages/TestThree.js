@@ -76,22 +76,22 @@ const TestThree = () => {
 							<div class="container__box">{t("task3-question8")}</div>
 							<div class="container__inputs">
 								<input
-									type="text"
+									type="number"
 									value={value1}
 									onChange={(e) => setValue1(e.target.value)}
 								/>
 								<input
-									type="text"
+									type="number"
 									value={value2}
 									onChange={(e) => setValue2(e.target.value)}
 								/>
 								<input
-									type="text"
+									type="number"
 									value={value3}
 									onChange={(e) => setValue3(e.target.value)}
 								/>
 								<input
-									type="text"
+									type="number"
 									value={value4}
 									onChange={(e) => setValue4(e.target.value)}
 								/>
@@ -101,17 +101,17 @@ const TestThree = () => {
 							<div class="container__box">{t("task3-question9")} </div>
 							<div class="container__inputs">
 								<input
-									type="text"
+									type="number"
 									value={value5}
 									onChange={(e) => setValue5(e.target.value)}
 								/>
 								<input
-									type="text"
+									type="number"
 									value={value6}
 									onChange={(e) => setValue6(e.target.value)}
 								/>
 								<input
-									type="text"
+									type="number"
 									value={value7}
 									onChange={(e) => setValue7(e.target.value)}
 								/>

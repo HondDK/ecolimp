@@ -13,7 +13,7 @@ const Registration = () => {
 	const [institution, setInstitution] = useState("");
 	const [profession, setProfession] = useState("");
 	const [course, setCourse] = useState("");
-	const [time, setTime] = useState("");
+	const [time, setTime] = useState();
 
 	React.useEffect(() => {
 		document.getElementById("noneSubmit").style.display = "none";

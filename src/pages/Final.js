@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { gglsheet } from "../libs/gglsheet";
 
@@ -11,6 +11,8 @@ const Final = () => {
 	const correct4 = sessionStorage.getItem("correct4");
 	const correct5 = sessionStorage.getItem("correct5");
 
+	const [send, setSend] = useState(sessionStorage.getItem("send") || false);
+
 	const totalScore =
 		Number(correct1) +
 		Number(correct2) +
@@ -19,8 +21,13 @@ const Final = () => {
 		Number(correct5);
 
 	const buttonSubmit = (e) => {
-		gglsheet(e);
+		if (send === false) {
+			setSend(!send);
+			setSend(sessionStorage.setItem("send", send));
+			gglsheet(e);
+		}
 	};
+
 	useEffect(() => {
 		buttonSubmit();
 	}, []);
@@ -81,7 +88,9 @@ const Final = () => {
 								<br />
 								<strong>{sessionStorage.getItem("course")}</strong>
 							</div>
-							<div class="divTableCell2">123&nbsp;</div>
+							<div class="divTableCell2">
+								{sessionStorage.getItem("time")}&nbsp;
+							</div>
 							<div class="divTableCell2">{correct1}&nbsp;</div>
 							<div class="divTableCell2">{correct2}&nbsp;</div>
 							<div class="divTableCell2">{correct3}&nbsp;</div>
