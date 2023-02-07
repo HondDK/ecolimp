@@ -11,7 +11,7 @@
 	"send": "Send",
 	"error": "Fill in all the fields",
 	"warning": "Warning",
-	"modal": "When passing the test, it is forbidden to switch tabs, minimize the browser. If these conditions are violated, the current task is canceled.",
+	"modal": "When passing the test, it is forbidden to switch tabs, refresh the page and minimize the browser. If these conditions are violated, the current task is canceled.",
 	"btn-true": "Accept",
 
 	"work1content": "Practical task №1",

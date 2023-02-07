@@ -14,7 +14,7 @@ const Language = () => {
 	return (
 		<div>
 			<body>
-				<header>Олимпиада по "Основам экономики"</header>
+				<header class="header_text">Олимпиада по "Основам экономики"</header>
 				<main>
 					<div class="title">Выберете язык</div>
 					<div class="list">

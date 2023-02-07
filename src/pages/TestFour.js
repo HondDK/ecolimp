@@ -146,8 +146,8 @@ const TestFour = () => {
 	return (
 		<div>
 			<body class="test">
-				<header>
-					<h1>Практическое задание №4</h1>
+				<header class="header_text">
+					<h1>{t("work4content")}</h1>
 					<p>
 						<Time min={min} onChange={handleChange} />
 					</p>

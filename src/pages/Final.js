@@ -35,7 +35,7 @@ const Final = () => {
 	return (
 		<div>
 			<main className="main_final">
-				<header>{t("result")}</header>
+				<header className="header_text">{t("result")}</header>
 				<div
 					class="divTable"
 					style={{

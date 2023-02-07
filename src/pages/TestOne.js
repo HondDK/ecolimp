@@ -71,7 +71,7 @@ const TestOne = () => {
 	return (
 		<div>
 			<body class="test">
-				<header>
+				<header class="header_text">
 					<h1>{t("work1content")}</h1>
 					<Time min={min} onChange={handleChange} />
 				</header>

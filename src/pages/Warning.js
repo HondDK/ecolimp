@@ -13,7 +13,7 @@ const Warning = () => {
 		<div>
 			<body>
 				<body className="content">
-					<header>{t("warning")}</header>
+					<header class="header_text">{t("warning")}</header>
 					<main>
 						<p
 							style={{

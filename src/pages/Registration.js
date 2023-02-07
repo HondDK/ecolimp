@@ -50,7 +50,7 @@ const Registration = () => {
 	return (
 		<div>
 			<body>
-				<header>{t("header")}</header>
+				<header class="header_text">{t("header")}</header>
 				<form class="content" name="google-sheet">
 					<div class="content__widget">
 						<p>{t("surname")}</p>

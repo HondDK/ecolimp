@@ -51,13 +51,12 @@ const TestTwo = () => {
 	};
 	return (
 		<body class="test">
-			<header>
+			<header class="header_text">
 				<h1>{t("work2content")}</h1>
 				<p>
 					<Time min={min} onChange={handleChange} />
 				</p>
 			</header>
-
 			<main class="main__test">
 				<div class="text">{t("task2")}</div>
 				<div class="test_btn">

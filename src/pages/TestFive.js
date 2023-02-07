@@ -125,7 +125,7 @@ const TestFive = () => {
 
 	return (
 		<body class="test">
-			<header class="test5-header">
+			<header class="header_text">
 				<h1>{t("work5content")}</h1>
 				<p>
 					<Time min={min} onChange={handleChange} />
