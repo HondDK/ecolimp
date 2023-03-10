@@ -18,6 +18,7 @@ const Registration = () => {
 	React.useEffect(() => {
 		document.getElementById("noneSubmit").style.display = "none";
 		currentTime();
+		sessionStorage.clear();
 	}, []);
 
 	const currentTime = () => {

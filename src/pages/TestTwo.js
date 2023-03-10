@@ -6,7 +6,7 @@ import OneAnswerQ from "../components/OneAnswerQ";
 
 function Quiz() {
 	let navigate = useNavigate();
-	const [min, setMin] = useState(30);
+	const [min, setMin] = useState(29);
 	const [value, setValue] = useState();
 	const [questions, setQuestions] = useState([]);
 	const [score, setScore] = useState(0);

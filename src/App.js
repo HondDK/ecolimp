@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 
-import TestOne from "./pages/TestOne";
 import TestTwo from "./pages/TestTwo";
 
 import Registration from "./pages/Registration";
@@ -21,11 +20,7 @@ const router = createBrowserRouter([
 		element: <Warning></Warning>,
 		errorElement: <ErrorPage />,
 	},
-	{
-		path: "/ecolimp/testone",
-		element: <TestOne></TestOne>,
-		errorElement: <ErrorPage />,
-	},
+
 	{
 		path: "/ecolimp/testtwo",
 		element: <TestTwo></TestTwo>,
@@ -40,29 +35,14 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
-	const [showModal, setShowModal] = useState(false);
-
 	function handleCopy(e) {
 		e.preventDefault();
-		setShowModal(e);
+
 		navigator.clipboard.writeText("...");
 	}
 
 	return (
 		<div className="App" onCopy={handleCopy}>
-			{showModal && (
-				<div className="modal">
-					<header
-						style={{
-							fontSize: "25px",
-							color: "red",
-						}}
-					>
-						Текст нельзя копировать!
-					</header>
-				</div>
-			)}
-
 			<RouterProvider router={router} />
 		</div>
 	);

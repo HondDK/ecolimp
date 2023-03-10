@@ -21,10 +21,10 @@ const Warning = () => {
 								fontSize: "40px",
 							}}
 						>
-							{t("modal")}
+							Внимание!
 						</p>
 						<button class="btn__submit" onClick={buttonSubmit}>
-							{t("btn-true")}
+							Тест нельзя закрывать, он завершится!
 						</button>
 					</main>
 				</body>
