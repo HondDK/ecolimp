@@ -15,25 +15,53 @@ function Quiz() {
 	useEffect(() => {
 		setQuestions(data.questions);
 	}, []);
-	console.log(data);
 
 	const handleChange = (value) => {
 		setValue(value);
+
+		if (value === false) {
+			sessionStorage.setItem("score", score);
+			navigate("/ecolimp/final", { replace: true });
+		}
 	};
 
 	const buttonSubmit = (e) => {
 		e.preventDefault();
-
+		sessionStorage.setItem("score", score);
 		navigate("/ecolimp/final", { replace: true });
 	};
 
 	function checkAnswer(questionIndex, optionIndex) {
 		const selectedOption = questions[questionIndex].options[optionIndex];
-		if (selectedOption === questions[questionIndex].answer) {
-			setScore(score + 1);
+
+		// был ли уже дан ответ на вопрос
+		if (questions[questionIndex].answered) {
+			// был ли ранее выбранный параметр правильным
+			const previousOption = questions[questionIndex].selectedOption;
+			if (questions[questionIndex].correctAnswers.includes(previousOption)) {
+				if (!questions[questionIndex].correctAnswers.includes(selectedOption)) {
+					setScore(score - 1);
+				}
+			} else {
+				if (questions[questionIndex].correctAnswers.includes(selectedOption)) {
+					setScore(score + 1);
+				}
+			}
+		} else {
+			// проверка на правильность
+			if (questions[questionIndex].correctAnswers.includes(selectedOption)) {
+				setScore(score + 1);
+			}
 		}
+		const updatedQuestions = [...questions];
+		updatedQuestions[questionIndex].selectedOption = selectedOption;
+		updatedQuestions[questionIndex].answered = true;
+		setQuestions(updatedQuestions);
 	}
 
+	useEffect(() => {
+		console.log(score);
+	}, [score]);
 	return (
 		<body className="test">
 			<header className="header_text">
