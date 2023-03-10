@@ -2,9 +2,7 @@ import React, { useState, useEffect } from "react";
 import Language from "./pages/Language";
 import TestOne from "./pages/TestOne";
 import TestTwo from "./pages/TestTwo";
-import TestTree from "./pages/TestThree";
-import TestFour from "./pages/TestFour";
-import TestFive from "./pages/TestFive";
+
 import Registration from "./pages/Registration";
 import ErrorPage from "./pages/ErrorPage";
 import Final from "./pages/Final";
@@ -34,18 +32,7 @@ const router = createBrowserRouter([
 		path: "/ecolimp/testtwo",
 		element: <TestTwo></TestTwo>,
 	},
-	{
-		path: "/ecolimp/testtree",
-		element: <TestTree></TestTree>,
-	},
-	{
-		path: "/ecolimp/testfour",
-		element: <TestFour></TestFour>,
-	},
-	{
-		path: "/ecolimp/testfive",
-		element: <TestFive></TestFive>,
-	},
+
 	{
 		path: "/ecolimp/final",
 		element: <Final></Final>,

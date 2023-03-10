@@ -55,6 +55,7 @@
 		},
 		{
 			"question": "При помощи какого свойства было создано данное меню на CSS?",
+			"img": "https://sun9-7.userapi.com/impg/akWRiISBbclbHvT7OyyAryHJmStPCtJZ6RWgeQ/5OWvjYWnyl4.jpg?size=410x43&quality=96&sign=41cb8e85106e8916c56d0f9c37505698&type=album",
 			"options": [
 				"display:  inline",
 				"display: block",
@@ -116,11 +117,13 @@
 		},
 		{
 			"question": "Какое значение будет выведено на экран при выполнении следующей программы на Python?",
+			"img": "https://sun9-63.userapi.com/impg/1Qjm_0sFetzgMvQcL7_C-11KYTuJ7KqHVPPQpQ/tipXSEA8p2Y.jpg?size=661x167&quality=96&sign=38e36203fefe541e925c74e87332a4dc&type=album",
 			"options": ["3", "5", "8", "15", "Ошибка выполнения программы"],
 			"answer": "8"
 		},
 		{
 			"question": "Какой результат будет выведен на экран при выполнении следующей программы на Python?",
+			"img": "https://sun9-40.userapi.com/impg/4K7YSzdp5TY2EMeqCmDDRhBovcMxINL0CrgdHQ/qzMTFCFHUMM.jpg?size=663x195&quality=96&sign=0ee42e19705621b6ae27a0e1d668bd12&type=album",
 			"options": [
 				"apple, cherry ",
 				"banana, cherry",
@@ -132,6 +135,7 @@
 		},
 		{
 			"question": "Какое значение будет выведено на экран при выполнении следующей программы на Python?",
+			"img": "https://sun9-56.userapi.com/impg/8U7mnWBiGvNsA6eEQ7-tFaEtwt53nE2tGoygow/v7sQTRAHSpE.jpg?size=665x190&quality=96&sign=7413f562fe6faa30a0ccb272cc27347c&type=album",
 			"options": [
 				"x is greater than 5 and less than 15",
 				"x is either less than or equal to 5 or greater than or equal to 15",
@@ -143,21 +147,25 @@
 		},
 		{
 			"question": "Какой результат будет выведен на экран при выполнении следующей программы на Python?",
+			"img": "https://sun3-17.userapi.com/impg/_EiEPsDtchkAqJj7og0mEFwU82vaG7IKuBD5MQ/a82qVFtryv8.jpg?size=663x120&quality=96&sign=91d1e6ca2656f9b326a85527c8a7543d&type=album",
 			"options": ["Hell", "ello", "llo,", "lo,", "Ошибка выполнения программы"],
 			"answer": "ello"
 		},
 		{
 			"question": "Какой результат будет выведен на экран при выполнении следующей программы на Python?",
+			"img": "https://sun9-43.userapi.com/impg/6gFDKcnJ_Bqd3bQ1-nUFd1Nq3a_pQrLfpHAe3g/MmqZCKrJXgQ.jpg?size=662x121&quality=96&sign=73ee347f178802459a9bab8f4bc7677b&type=album",
 			"options": ["1", "2", "3", "4", "5"],
 			"answer": "3"
 		},
 		{
 			"question": "Какой результат будет выведен на экран при выполнении следующей программы на Python?",
+			"img": "https://sun3-12.userapi.com/impg/j6IwXvDOVrROi0iWcGmVVyBAXGpTP2MERIx2Dg/Pb4S1EQOlVQ.jpg?size=663x143&quality=96&sign=51a404b8a55e903b3b99724859ef4d89&type=album",
 			"options": ["2", "3", "4", "5", "Ошибка выполнения программы"],
 			"answer": "4"
 		},
 		{
 			"question": "Какой результат будет выведен на экран при выполнении следующей программы на Python?",
+			"img": "https://sun3-6.userapi.com/impg/5vEJJsMlZZt25kukrPxXc--wsxQsCD_-JFQ2Fg/_sZVltz9V00.jpg?size=665x144&quality=96&sign=f84af996e8a4e6fda426396b7f8233fa&type=album",
 			"options": [
 				"[1, 2, 3, 4, 5]",
 				"[2, 4, 6, 8, 10]",
@@ -169,6 +177,7 @@
 		},
 		{
 			"question": "Какой результат будет выведен на экран при выполнении следующей программы на Python?",
+			"img": "https://sun9-2.userapi.com/impg/8V0_bSnyGBOWsudkA7XWBvnARwupi8P-RVNf6A/vQgzZDqvwNY.jpg?size=666x147&quality=96&sign=22521e8e383bbdfb350045e356a99455&type=album",
 			"options": [
 				"[1, 2, 4, 5]",
 				"[1, 2, 3, 5]",

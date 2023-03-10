@@ -16,7 +16,6 @@ const TestOne = () => {
 	const [selectedOption, setSelectedOption] = useState("");
 	const [correctCount, setСorrectCount] = useState(0);
 	const [selectedButtons, setSelectedButtons] = useState([]);
-	
 
 	const handleButtonClick = (button) => {
 		setSelectedOption((prevOptions) => {
@@ -39,7 +38,7 @@ const TestOne = () => {
 	const handleChange = (value) => {
 		setValue(value);
 
-		if (value === false ) {
+		if (value === false) {
 			checkCorrectCount(value);
 			removeSessionStorage();
 			navigate("/ecolimp/testtwo", { replace: true });
@@ -61,12 +60,12 @@ const TestOne = () => {
 		navigate("/ecolimp/testtwo", { replace: true });
 	};
 
-	const isVisible = useCheckVisible();
-	//console.log(isVisible);
-	if (isVisible === false) {
-		removeSessionStorage();
-		navigate("/ecolimp/testtwo", { replace: true });
-	}
+	// const isVisible = useCheckVisible();
+	// //console.log(isVisible);
+	// if (isVisible === false) {
+	// 	removeSessionStorage();
+	// 	navigate("/ecolimp/testtwo", { replace: true });
+	// }
 
 	return (
 		<div>

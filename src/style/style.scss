@@ -193,6 +193,13 @@ main {
 			}
 			text-align: justify;
 		}
+		p {
+			margin-top: 50px;
+			font-size: 25px;
+		}
+		img {
+			margin-top: 25px;
+		}
 	}
 	.p__test-text {
 		font-size: 18px;
@@ -434,18 +441,16 @@ ol {
 }
 
 .test_btn {
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	grid-template-rows: repeat(2, 1fr);
 	grid-column-gap: 18%;
-	grid-row-gap: 96px;
-	margin-top: 5%;
+	grid-row-gap: 25px;
+	margin-top: 2%;
+
 	button {
 		border-radius: 15px;
 		font-family: $Inter;
-		font-size: 40px;
-		// width: 522px;
-		height: 100px;
+		font-size: 20px;
+		width: 522px;
+		height: 50px;
 	}
 }
 

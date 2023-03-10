@@ -50,7 +50,10 @@ const Registration = () => {
 	return (
 		<div>
 			<body>
-				<header class="header_text">{t("header")}</header>
+				<header class="header_text">
+					Отборочные тесты для участников Хакатона учителей Карагандинской
+					области
+				</header>
 				<form class="content" name="google-sheet">
 					<div class="content__widget">
 						<p>{t("surname")}</p>
@@ -91,14 +94,6 @@ const Registration = () => {
 							type={"text"}
 							onChange={(e) => {
 								setProfession(e.target.value);
-							}}
-						/>
-						<p>{t("course")}</p>
-						<input
-							name="Course"
-							type={"number"}
-							onChange={(e) => {
-								setCourse(e.target.value);
 							}}
 						/>
 						<input
