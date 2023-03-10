@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Language from "./pages/Language";
+
 import TestOne from "./pages/TestOne";
 import TestTwo from "./pages/TestTwo";
 
@@ -12,30 +12,30 @@ import Warning from "./pages/Warning";
 
 const router = createBrowserRouter([
 	{
-		path: "/ecolimp/",
-		element: <Language></Language>,
-		errorElement: <ErrorPage />,
-	},
-	{
 		path: "/ecolimp/reg",
 		element: <Registration></Registration>,
+		errorElement: <ErrorPage />,
 	},
 	{
 		path: "/ecolimp/warning",
 		element: <Warning></Warning>,
+		errorElement: <ErrorPage />,
 	},
 	{
 		path: "/ecolimp/testone",
 		element: <TestOne></TestOne>,
+		errorElement: <ErrorPage />,
 	},
 	{
 		path: "/ecolimp/testtwo",
 		element: <TestTwo></TestTwo>,
+		errorElement: <ErrorPage />,
 	},
 
 	{
 		path: "/ecolimp/final",
 		element: <Final></Final>,
+		errorElement: <ErrorPage />,
 	},
 ]);
 

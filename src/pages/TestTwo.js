@@ -1,20 +1,42 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import json from "../test.json";
-import OneAnswerQ from "../components/OneAnswerQ";
 import Time from "../components/UI/Time/Time";
+import { useNavigate } from "react-router-dom";
+import OneAnswerQ from "../components/OneAnswerQ";
+
 function Quiz() {
-	const [min, setMin] = useState(2);
+	let navigate = useNavigate();
+	const [min, setMin] = useState(30);
 	const [value, setValue] = useState();
+	const [questions, setQuestions] = useState([]);
+	const [score, setScore] = useState(0);
+
 	const data = json;
+	useEffect(() => {
+		setQuestions(data.questions);
+	}, []);
 	console.log(data);
 
 	const handleChange = (value) => {
 		setValue(value);
 	};
 
+	const buttonSubmit = (e) => {
+		e.preventDefault();
+
+		navigate("/ecolimp/final", { replace: true });
+	};
+
+	function checkAnswer(questionIndex, optionIndex) {
+		const selectedOption = questions[questionIndex].options[optionIndex];
+		if (selectedOption === questions[questionIndex].answer) {
+			setScore(score + 1);
+		}
+	}
+
 	return (
-		<body class="test">
-			<header class="header_text">
+		<body className="test">
+			<header className="header_text">
 				<h1>
 					Отборочные тесты для участников Хакатона учителей Карагандинской
 					области
@@ -23,15 +45,23 @@ function Quiz() {
 			</header>
 
 			<main className="main__test">
-				{data.questions.map((item) => (
-					<>
-						<p>{item.question}</p>
-						<img src={item.img} />
-						<OneAnswerQ question={item.question} options={item.options}>
-							{item.question}
-						</OneAnswerQ>
-					</>
+				{data.questions.map((question, index) => (
+					<div key={index}>
+						<p>{question.question}</p>
+						<img src={question.img} alt="" />
+						<OneAnswerQ
+							key={index}
+							question={question.question}
+							options={question.options}
+							checkAnswer={(optionIndex) => checkAnswer(index, optionIndex)}
+						/>
+					</div>
 				))}
+				<div class="wrap__btn">
+					<button onClick={buttonSubmit} className="btn__close-task">
+						Завершить тест
+					</button>
+				</div>
 			</main>
 		</body>
 	);

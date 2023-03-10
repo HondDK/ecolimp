@@ -56,7 +56,7 @@ const Registration = () => {
 				</header>
 				<form class="content" name="google-sheet">
 					<div class="content__widget">
-						<p>{t("surname")}</p>
+						<p>Фамилия</p>
 						<input
 							name="Surname"
 							type={"text"}
@@ -64,7 +64,7 @@ const Registration = () => {
 								setSurname(e.target.value);
 							}}
 						/>
-						<p>{t("name")}</p>
+						<p>Имя</p>
 						<input
 							name="Name"
 							type={"text"}
@@ -72,7 +72,7 @@ const Registration = () => {
 								setName(e.target.value);
 							}}
 						/>
-						<p>{t("patronymic")}</p>
+						<p>Отчество</p>
 						<input
 							name="Patronymic"
 							type={"text"}
@@ -80,7 +80,7 @@ const Registration = () => {
 								setPatronymic(e.target.value);
 							}}
 						/>
-						<p>{t("institution")}</p>
+						<p>Учебное заведение</p>
 						<input
 							name="Institution"
 							type={"text"}
@@ -88,7 +88,7 @@ const Registration = () => {
 								setInstitution(e.target.value);
 							}}
 						/>
-						<p>{t("prof")}</p>
+						<p>Профессия</p>
 						<input
 							name="Profession"
 							type={"text"}
@@ -110,7 +110,7 @@ const Registration = () => {
 						{t("error")}
 					</p>
 					<button class="btn__submit" onClick={buttonSubmit}>
-						{t("send")}
+						Продолжить
 					</button>
 				</form>
 			</body>

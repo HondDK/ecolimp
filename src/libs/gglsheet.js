@@ -1,5 +1,5 @@
 const scriptUrl =
-	"https://script.google.com/macros/s/AKfycbxwMo5WD--hbCvo-892P64qfHQ0fxEu-ObgGRV9W_EzhOr87sIe2y_Nf6sgQmI2KJS4/exec";
+	"https://script.google.com/macros/s/AKfycbwJss7eZk7zMHQwWvwyUZnYElkIptuioUMCUsUkhBgdfMb02u4eG3ybsMEznV1qTkdI/exec";
 
 export function gglsheet() {
 	const formEle = document.querySelector("form");

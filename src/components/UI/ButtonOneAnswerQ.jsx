@@ -4,11 +4,13 @@ const ButtonOneAnswerQ = (props) => {
 	const [buttonColor, setButtonColor] = useState("white");
 
 	return (
+		
 		<button
 			style={{ backgroundColor: buttonColor }}
-			onClick={() =>
-				setButtonColor(buttonColor === "white" ? "green" : "white")
-			}
+			onClick={() => {
+				setButtonColor(buttonColor === "white" ? "green" : "white");
+				props.checkAnswer();
+			}}
 		>
 			{props.children}
 		</button>
