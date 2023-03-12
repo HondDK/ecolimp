@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/ecolimp/reg/static/css/main.33e77548.css",
-    "main.js": "/ecolimp/reg/static/js/main.497ae048.js",
+    "main.js": "/ecolimp/reg/static/js/main.1d4cf3c2.js",
     "index.html": "/ecolimp/reg/index.html",
     "main.33e77548.css.map": "/ecolimp/reg/static/css/main.33e77548.css.map",
-    "main.497ae048.js.map": "/ecolimp/reg/static/js/main.497ae048.js.map"
+    "main.1d4cf3c2.js.map": "/ecolimp/reg/static/js/main.1d4cf3c2.js.map"
   },
   "entrypoints": [
     "static/css/main.33e77548.css",
-    "static/js/main.497ae048.js"
+    "static/js/main.1d4cf3c2.js"
   ]
 }
