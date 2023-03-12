@@ -13,18 +13,17 @@ const Warning = () => {
 		<div>
 			<body>
 				<body className="content">
-					<header class="header_text">{t("warning")}</header>
+					<header class="header_text">Внимание!</header>
 					<main>
 						<p
 							style={{
-								textAlign: "justify",
-								fontSize: "40px",
+								fontSize: "35px",
 							}}
 						>
-							Внимание!
+							Тест нельзя закрывать, он завершится!
 						</p>
 						<button class="btn__submit" onClick={buttonSubmit}>
-							Тест нельзя закрывать, он завершится!
+							Продолжить
 						</button>
 					</main>
 				</body>
