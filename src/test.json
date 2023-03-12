@@ -1,0 +1,296 @@
+{
+	"questions": [
+		{
+			"question": "Какое свойство CSS задаёт расстояние от содержимого элемента до рамки?",
+			"options": ["margin", "padding", "border", "outline", "overflow"],
+			"correctAnswers": ["padding"]
+		},
+		{
+			"question": "Укажите возможные в CSS типы селекторов (несколько правильных ответов)",
+			"options": [
+				"Селектор по маске",
+				"Селектор по идентификатору",
+				"Селектор по классу",
+				"Контентный селектор",
+				"Селектор выбора"
+			],
+			"correctAnswers": ["Селектор по идентификатору", "Селектор по классу"]
+		},
+		{
+			"question": "Необходимые шаги для создания меню на CSS. (Несколько верных ответов)",
+			"options": [
+				"создание маркированного списка на HTML",
+				"создание нумерованного списка на HTML",
+				"для идентификации добавить id",
+				"сбросить стили списка, установленных по умолчанию",
+				"убрать внешние и внутренние отступы у самого списка и маркеры у пунктов списка"
+			],
+			"correctAnswers": [
+				"создание маркированного списка на HTML",
+				"для идентификации добавить id",
+				"сбросить стили списка, установленных по умолчанию",
+				"убрать внешние и внутренние отступы у самого списка и маркеры у пунктов списка"
+			]
+		},
+		{
+			"question": "При наведении курсора мыши на пункт меню в CSS его внешний вид может изменяться, привлекая к себе внимание пользователя. Создать такой эффект можно с помощью",
+			"options": [
+				"псевдо-класса :hover",
+				"атрибута effect",
+				"ссылки <a>",
+				"z-index",
+				"псевдо-элемент :first"
+			],
+			"correctAnswers": ["псевдо-класса :hover"]
+		},
+		{
+			"question": "Для создания горизонтального меню на CSS необходимо применить",
+			"options": [
+				"display: inline",
+				"list-style-type: none",
+				"<li><a href='#'>О нас</a></li>",
+				"text-decoration: none;",
+				"position: absolute"
+			],
+			"correctAnswers": ["display: inline"]
+		},
+		{
+			"question": "При помощи какого свойства было создано данное меню на CSS?",
+			"img": "https://sun9-7.userapi.com/impg/akWRiISBbclbHvT7OyyAryHJmStPCtJZ6RWgeQ/5OWvjYWnyl4.jpg?size=410x43&quality=96&sign=41cb8e85106e8916c56d0f9c37505698&type=album",
+			"options": [
+				"display:  inline",
+				"display: block",
+				"display: inline-block",
+				"float: left",
+				"position: absolute"
+			],
+			"correctAnswers": ["display: inline-block"]
+		},
+		{
+			"question": " Какое свойство CSS позволяет сделать элемент 'плавающим'?",
+			"options": ["float", "margin", "block", "padding", "last-child"],
+			"correctAnswers": "float"
+		},
+		{
+			"question": "Найдите верный код применения свойства CSS float к любой картинке",
+			"options": [
+				"img { float: left }",
+				"pic { float: left }",
+				"img float",
+				"float: left",
+				"hover img float"
+			],
+			"correctAnswers": "img { float: left }"
+		},
+		{
+			"question": "Отметьте верный код подключения стилей CSS с помощью тега <link>",
+			"options": [
+				"<link rel='stylesheet' type='text/javascript' href='style.css'>",
+				"<link rel='stylesheet' type='text/css' href='style.css'>",
+				"<link type='text/css' rel='stylesheet' href='style.css'>",
+				"<link href='style.css' type='text/css' rel='stylesheet'>",
+				"<link rel='stylesheet' href='style.css' type='text/css'>"
+			],
+			"correctAnswers": "<link rel='stylesheet' href='style.css' type='text/css'>"
+		},
+		{
+			"question": "Как можно заменить следующую инструкцию на Python: ",
+			"img": "https://sun9-67.userapi.com/impg/UuxAGGUGvqtszUWbsTC8-9eWyUMiVAruDJd1zg/IitkdZjdBi4.jpg?size=800x92&quality=96&sign=a11b96f03dd60ae71f3f899fa1748c71&type=album",
+			"options": [
+				"A = Y if X else Z",
+				"A = X ? Y : Z",
+				"A = Y else Z if X",
+				"A = Y or Z if X",
+				"A = Y and Z if X"
+			],
+			"correctAnswers": "A = Y if X else Z"
+		},
+		{
+			"question": "Как создать список в Python? ",
+			"options": [
+				"list(1, 2, 3)",
+				"[1, 2, 3]",
+				"{1, 2, 3}",
+				"(1, 2, 3) ",
+				"'1, 2, 3'"
+			],
+			"correctAnswers": "[1, 2, 3]"
+		},
+		{
+			"question": "Какое значение будет выведено на экран при выполнении следующей программы на Python?",
+			"img": "https://sun9-63.userapi.com/impg/1Qjm_0sFetzgMvQcL7_C-11KYTuJ7KqHVPPQpQ/tipXSEA8p2Y.jpg?size=661x167&quality=96&sign=38e36203fefe541e925c74e87332a4dc&type=album",
+			"options": ["3", "5", "8", "15", "Ошибка выполнения программы"],
+			"correctAnswers": "8"
+		},
+		{
+			"question": "Какой результат будет выведен на экран при выполнении следующей программы на Python?",
+			"img": "https://sun9-40.userapi.com/impg/4K7YSzdp5TY2EMeqCmDDRhBovcMxINL0CrgdHQ/qzMTFCFHUMM.jpg?size=663x195&quality=96&sign=0ee42e19705621b6ae27a0e1d668bd12&type=album",
+			"options": [
+				"apple, cherry ",
+				"banana, cherry",
+				"apple, banana",
+				"apple, banana, cherry",
+				"Ничего не будет выведено на экран"
+			],
+			"correctAnswers": ["apple, cherry"]
+		},
+		{
+			"question": "Какое значение будет выведено на экран при выполнении следующей программы на Python?",
+			"img": "https://sun9-56.userapi.com/impg/8U7mnWBiGvNsA6eEQ7-tFaEtwt53nE2tGoygow/v7sQTRAHSpE.jpg?size=665x190&quality=96&sign=7413f562fe6faa30a0ccb272cc27347c&type=album",
+			"options": [
+				"x is greater than 5 and less than 15",
+				"x is either less than or equal to 5 or greater than or equal to 15",
+				"x is greater than 5",
+				"x is less than 15",
+				"Ошибка выполнения программы"
+			],
+			"correctAnswers": ["x is greater than 5 and less than 15"]
+		},
+		{
+			"question": "Какой результат будет выведен на экран при выполнении следующей программы на Python?",
+			"img": "https://sun3-17.userapi.com/impg/_EiEPsDtchkAqJj7og0mEFwU82vaG7IKuBD5MQ/a82qVFtryv8.jpg?size=663x120&quality=96&sign=91d1e6ca2656f9b326a85527c8a7543d&type=album",
+			"options": ["Hell", "ello", "llo,", "lo,", "Ошибка выполнения программы"],
+			"correctAnswers": "ello"
+		},
+		{
+			"question": "Какой результат будет выведен на экран при выполнении следующей программы на Python?",
+			"img": "https://sun9-43.userapi.com/impg/6gFDKcnJ_Bqd3bQ1-nUFd1Nq3a_pQrLfpHAe3g/MmqZCKrJXgQ.jpg?size=662x121&quality=96&sign=73ee347f178802459a9bab8f4bc7677b&type=album",
+			"options": ["1", "2", "3", "4", "5"],
+			"correctAnswers": ["3"]
+		},
+		{
+			"question": "Какой результат будет выведен на экран при выполнении следующей программы на Python?",
+			"img": "https://sun3-12.userapi.com/impg/j6IwXvDOVrROi0iWcGmVVyBAXGpTP2MERIx2Dg/Pb4S1EQOlVQ.jpg?size=663x143&quality=96&sign=51a404b8a55e903b3b99724859ef4d89&type=album",
+			"options": ["2", "3", "4", "5", "Ошибка выполнения программы"],
+			"correctAnswers": ["4"]
+		},
+		{
+			"question": "Какой результат будет выведен на экран при выполнении следующей программы на Python?",
+			"img": "https://sun3-6.userapi.com/impg/5vEJJsMlZZt25kukrPxXc--wsxQsCD_-JFQ2Fg/_sZVltz9V00.jpg?size=665x144&quality=96&sign=f84af996e8a4e6fda426396b7f8233fa&type=album",
+			"options": [
+				"[1, 2, 3, 4, 5]",
+				"[2, 4, 6, 8, 10]",
+				"[2, 4, 6, 8, 10, 12]",
+				"[1, 4, 9, 16, 25]",
+				"Ошибка выполнения программы"
+			],
+			"correctAnswers": "[2, 4, 6, 8, 10]"
+		},
+		{
+			"question": "Какой результат будет выведен на экран при выполнении следующей программы на Python?",
+			"img": "https://sun9-2.userapi.com/impg/8V0_bSnyGBOWsudkA7XWBvnARwupi8P-RVNf6A/vQgzZDqvwNY.jpg?size=666x147&quality=96&sign=22521e8e383bbdfb350045e356a99455&type=album",
+			"options": [
+				"[1, 2, 4, 5]",
+				"[1, 2, 3, 5]",
+				"[1, 2, 3, 4]",
+				"[2, 3, 4, 5]",
+				"Ошибка выполнения программы"
+			],
+			"correctAnswers": "[1, 2, 4, 5]"
+		},
+		{
+			"question": "Какой тип шрифта чаще всего используется для заголовков и акцентных элементов в дизайне?",
+			"options": ["Serif", "Sans-serif ", "Script", "Display", "Monospace"],
+			"correctAnswers": ["Sans-serif"]
+		},
+		{
+			"question": "Что такое 'белое пространство' в дизайне?",
+			"options": [
+				"Пространство между буквами в тексте",
+				"Пространство между элементами на странице",
+				"Неприменение цвета в дизайне",
+				"Размер области, которую занимает элемент дизайна",
+				"Пространство на странице, оставленное пустым для улучшения читабельности и визуальной привлекательности"
+			],
+			"correctAnswers": [
+				"Пространство на странице, оставленное пустым для улучшения читабельности и визуальной привлекательности"
+			]
+		},
+		{
+			"question": "Какой из этих форматов изображения подходит лучше всего для изображений с большим количеством цветов и деталей?",
+			"img": "",
+			"options": ["JPEG", "PNG", "GIF", "TIFF", "BMP"],
+			"correctAnswers": ["TIFF"]
+		},
+		{
+			"question": "Что такое 'типографика' в дизайне?",
+			"options": [
+				"Процесс создания макета",
+				"Размер и расположение текста на странице",
+				"Использование цвета в дизайне",
+				"Использование изображений в дизайне",
+				"Техника создания композиции из разных элементов дизайна"
+			],
+			"correctAnswers": ["Размер и расположение текста на странице"]
+		},
+		{
+			"question": "Какой из этих форматов изображения подходит лучше всего для изображений с прозрачным фоном?",
+			"options": ["JPEG", "PNG", "GIF", "TIFF", "BMP"],
+			"correctAnswers": ["PNG"]
+		},
+		{
+			"question": "Что такое 'сетка' в дизайне?",
+			"options": [
+				"Набор изображений, используемых для создания композиции",
+				"Изображение, разбитое на небольшие кусочки для ускорения загрузки на веб-странице",
+				"Изображение, созданное из точек или пикселей",
+				"Система вертикальных и горизонтальных линий, используемая для выравнивания элементов на странице",
+				"Инструмент для создания градиентов"
+			],
+			"correctAnswers": [
+				"Система вертикальных и горизонтальных линий, используемая для выравнивания элементов на странице"
+			]
+		},
+		{
+			"question": "Что такое 'тип личности' в дизайне?",
+			"options": [
+				"Стиль, который используется в дизайне логотипа",
+				"Общая атмосфера, которую дизайнер стремится создать в проекте",
+				"Характеристики целевой аудитории проекта",
+				"Категория шрифтов, которые используются в дизайне",
+				"Стиль, который характеризует личность дизайнера"
+			],
+			"correctAnswers": [
+				"Общая атмосфера, которую дизайнер стремится создать в проекте"
+			]
+		},
+		{
+			"question": "Какой из этих шрифтов является примером с засечками (serif)?",
+			"options": [
+				"Arial",
+				"Times New Roman",
+				"Verdana",
+				"Helvetica",
+				"Calibri"
+			],
+			"correctAnswers": ["Times New Roman"]
+		},
+		{
+			"question": "Какой из этих логотипов использует градиентный эффект?",
+			"options": ["Nike", "McDonald's", "Apple", "FedEx", "Coca-Cola"],
+			"correctAnswers": "Apple"
+		},
+		{
+			"question": "Какой из этих элементов дизайна является примером использования пропорций?",
+			"options": [
+				"Цветовая гамма",
+				"Шрифт",
+				"Расположение элементов на странице",
+				"Текстура",
+				"Использование разных типов шрифтов в дизайне"
+			],
+			"correctAnswers": ["Расположение элементов на странице"]
+		},
+		{
+			"question": "Какой из этих элементов дизайна использует перспективу?",
+			"options": [
+				"Фотография",
+				"Шрифт",
+				"Цветовая гамма",
+				"Текстура",
+				"Изображение, созданное из форм и линий"
+			],
+			"correctAnswers": ["Изображение, созданное из форм и линий"]
+		}
+	]
+}

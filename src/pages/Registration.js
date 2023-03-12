@@ -18,6 +18,7 @@ const Registration = () => {
 	React.useEffect(() => {
 		document.getElementById("noneSubmit").style.display = "none";
 		currentTime();
+		sessionStorage.clear();
 	}, []);
 
 	const currentTime = () => {
@@ -50,10 +51,13 @@ const Registration = () => {
 	return (
 		<div>
 			<body>
-				<header class="header_text">{t("header")}</header>
+				<header class="header_text">
+					Отборочные тесты для участников Хакатона учителей Карагандинской
+					области
+				</header>
 				<form class="content" name="google-sheet">
 					<div class="content__widget">
-						<p>{t("surname")}</p>
+						<p>Фамилия</p>
 						<input
 							name="Surname"
 							type={"text"}
@@ -61,7 +65,7 @@ const Registration = () => {
 								setSurname(e.target.value);
 							}}
 						/>
-						<p>{t("name")}</p>
+						<p>Имя</p>
 						<input
 							name="Name"
 							type={"text"}
@@ -69,7 +73,7 @@ const Registration = () => {
 								setName(e.target.value);
 							}}
 						/>
-						<p>{t("patronymic")}</p>
+						<p>Отчество</p>
 						<input
 							name="Patronymic"
 							type={"text"}
@@ -77,7 +81,7 @@ const Registration = () => {
 								setPatronymic(e.target.value);
 							}}
 						/>
-						<p>{t("institution")}</p>
+						<p>Учебное заведение</p>
 						<input
 							name="Institution"
 							type={"text"}
@@ -85,20 +89,12 @@ const Registration = () => {
 								setInstitution(e.target.value);
 							}}
 						/>
-						<p>{t("prof")}</p>
+						<p>Профессия</p>
 						<input
 							name="Profession"
 							type={"text"}
 							onChange={(e) => {
 								setProfession(e.target.value);
-							}}
-						/>
-						<p>{t("course")}</p>
-						<input
-							name="Course"
-							type={"number"}
-							onChange={(e) => {
-								setCourse(e.target.value);
 							}}
 						/>
 						<input
@@ -107,16 +103,17 @@ const Registration = () => {
 							style={{ display: "none" }}
 							value={time}
 						/>
+
+						<p
+							id="noneSubmit"
+							style={{ color: "red", textAlign: "center", fontSize: "20px" }}
+						>
+							Заполните все поля!
+						</p>
+						<button class="btn__submit" onClick={buttonSubmit}>
+							Продолжить
+						</button>
 					</div>
-					<p
-						id="noneSubmit"
-						style={{ color: "red", textAlign: "center", fontSize: "20px" }}
-					>
-						{t("error")}
-					</p>
-					<button class="btn__submit" onClick={buttonSubmit}>
-						{t("send")}
-					</button>
 				</form>
 			</body>
 		</div>

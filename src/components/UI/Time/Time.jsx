@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 
 const Time = ({ onChange, min }) => {
 	const [seconds, setSeconds] = useState(
-		() => sessionStorage.getItem("seconds") || 60
+		() => sessionStorage.getItem("seconds") || 59
 	);
 	const [minutes, setMinutes] = useState(
 		() => sessionStorage.getItem("minutes") || min

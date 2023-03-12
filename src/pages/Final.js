@@ -3,22 +3,9 @@ import { useTranslation } from "react-i18next";
 import { gglsheet } from "../libs/gglsheet";
 
 const Final = () => {
-	const { t } = useTranslation();
-
-	const correct1 = sessionStorage.getItem("correct1");
-	const correct2 = sessionStorage.getItem("correct2");
-	const correct3 = sessionStorage.getItem("correct3");
-	const correct4 = sessionStorage.getItem("correct4");
-	const correct5 = sessionStorage.getItem("correct5");
-
 	const [send, setSend] = useState(sessionStorage.getItem("send") || false);
 
-	const totalScore =
-		Number(correct1) +
-		Number(correct2) +
-		Number(correct3) +
-		Number(correct4) +
-		Number(correct5);
+	const totalScore = sessionStorage.getItem("score");
 
 	const buttonSubmit = (e) => {
 		if (send === false) {
@@ -35,7 +22,7 @@ const Final = () => {
 	return (
 		<div>
 			<main className="main_final">
-				<header className="header_text">{t("result")}</header>
+				<header className="header_text">Результаты теста</header>
 				<div
 					class="divTable"
 					style={{
@@ -50,28 +37,13 @@ const Final = () => {
 								style={{ width: "250px", height: "50px" }}
 								class="divTableCell2 tableCell"
 							>
-								&nbsp;<strong>{t("site")}</strong>
+								&nbsp;<strong>Участник</strong>
 							</div>
 							<div style={{ width: "130px" }} class="divTableCell2 tableCell2">
-								&nbsp;<strong>{t("timeZ")}</strong>
-							</div>
-							<div class="divTableCell2 tableCell">
-								<strong>№ 1</strong>&nbsp;
-							</div>
-							<div class="divTableCell2 tableCell">
-								<strong>№ 2</strong>&nbsp;
-							</div>
-							<div class="divTableCell2 tableCell">
-								<strong>№ 3</strong>&nbsp;
-							</div>
-							<div class="divTableCell2 tableCell">
-								<strong>№ 4</strong>&nbsp;
-							</div>
-							<div class="divTableCell2 tableCell">
-								<strong>№ 5</strong>&nbsp;
+								&nbsp;<strong>Время</strong>
 							</div>
 							<div style={{ width: "150px" }} class="divTableCell2 tableCell">
-								<strong>{t("allResult")}</strong>&nbsp;
+								<strong>Общий результат</strong>&nbsp;
 							</div>
 						</div>
 						<div class="divTableRow">
@@ -91,11 +63,6 @@ const Final = () => {
 							<div class="divTableCell2">
 								{sessionStorage.getItem("time")}&nbsp;
 							</div>
-							<div class="divTableCell2">{correct1}&nbsp;</div>
-							<div class="divTableCell2">{correct2}&nbsp;</div>
-							<div class="divTableCell2">{correct3}&nbsp;</div>
-							<div class="divTableCell2">{correct4}&nbsp;</div>
-							<div class="divTableCell2">{correct5}&nbsp;</div>
 							<div class="divTableCell2">
 								{totalScore}
 								<form class="content" name="google-sheet">
@@ -151,9 +118,7 @@ const Final = () => {
 										style={{ display: "none" }}
 										class="btn__submit"
 										onClick={buttonSubmit}
-									>
-										{t("send")}
-									</button>
+									></button>
 								</form>
 								&nbsp;
 							</div>
