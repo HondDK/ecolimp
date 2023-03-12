@@ -103,16 +103,17 @@ const Registration = () => {
 							style={{ display: "none" }}
 							value={time}
 						/>
+
+						<p
+							id="noneSubmit"
+							style={{ color: "red", textAlign: "center", fontSize: "20px" }}
+						>
+							Заполните все поля!
+						</p>
+						<button class="btn__submit" onClick={buttonSubmit}>
+							Продолжить
+						</button>
 					</div>
-					<p
-						id="noneSubmit"
-						style={{ color: "red", textAlign: "center", fontSize: "20px" }}
-					>
-						{t("error")}
-					</p>
-					<button class="btn__submit" onClick={buttonSubmit}>
-						Продолжить
-					</button>
 				</form>
 			</body>
 		</div>

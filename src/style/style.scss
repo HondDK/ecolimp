@@ -36,10 +36,9 @@ body {
 	font-family: $Inter;
 	text-align: center;
 	margin-top: 74px;
+	font-size: 25px;
 }
-h1 {
-	font-size: 40px;
-}
+
 button {
 	transition: transform 0.5s ease;
 }
@@ -122,22 +121,26 @@ main {
 }
 
 .content {
-	width: 57%;
+	width: 90%;
 	margin: auto;
 	font-family: $Inter;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	p {
+		font-size: 25px;
+		margin-top: 15px;
+		margin-bottom: 5px;
+	}
 	.content__widget {
 		margin-top: 12%;
 		font-size: $fzBtn;
-		display: grid;
-		grid-template-columns: 1fr 350px;
-		grid-template-rows: repeat(5, 1fr);
-		grid-column-gap: 20px;
-		grid-row-gap: 35px;
-
+		width: 100%;
+		height: 65px;
 		input {
 			border-radius: $inputRadius;
 
-			width: 100%;
+			width: 90%;
 			height: 100%;
 
 			font-family: $Inter;
@@ -149,9 +152,9 @@ main {
 	.btn__submit {
 		display: flex;
 		margin: auto;
-		width: 784px;
+		width: 100%;
 		justify-content: center;
-		justify-self: stretch;
+
 		border-radius: $btnRadius;
 		margin-top: 15%;
 		color: $white;
@@ -167,12 +170,15 @@ main {
 	header {
 		display: flex;
 		justify-content: space-between;
+		flex-direction: column;
+
 		h1 {
-			font-size: 40px;
+			font-size: 25px;
 			margin-top: 2.5%;
 			font-family: "Inter", sans-serif;
 		}
 		p {
+			margin-top: 15px;
 			font-family: "Inter", sans-serif;
 			font-size: 80px;
 		}
@@ -182,6 +188,8 @@ main {
 	}
 	.main__test {
 		margin-top: 7%;
+		display: flex;
+		flex-direction: column;
 		text-align: center;
 		.ol_list {
 			text-align: justify;
@@ -195,9 +203,10 @@ main {
 		}
 		p {
 			margin-top: 50px;
-			font-size: 25px;
+			font-size: 20px;
 		}
 		img {
+			width: 100%;
 			margin-top: 25px;
 		}
 	}
@@ -234,7 +243,7 @@ main {
 		display: flex;
 		margin-left: auto;
 		width: 434px;
-		height: 81px;
+		height: 100%;
 		justify-content: center;
 		justify-self: stretch;
 		border-radius: $btnRadius;
@@ -244,7 +253,7 @@ main {
 		font-family: $Inter;
 		padding: 20px;
 		background-color: $btnColor;
-		font-size: $fzBtn;
+		font-size: 20px;
 	}
 }
 
@@ -441,16 +450,17 @@ ol {
 }
 
 .test_btn {
-	grid-column-gap: 18%;
-	grid-row-gap: 25px;
+	display: flex;
+	flex-direction: column;
 	margin-top: 2%;
 
 	button {
 		border-radius: 15px;
 		font-family: $Inter;
-		font-size: 16px;
-		width: 522px;
-		height: 50px;
+		font-size: 14px;
+		width: 100%;
+		height: 65px;
+		padding: auto;
 	}
 }
 
